@@ -17,9 +17,9 @@ impl Industry {
     fn cost(kind:u32)->u32 {buildings::cost(kind as u8) as u32}
     pub fn starter()->Self {Self{pool:[0,2,0,0,0,0,0,0],..Self::default()}}
     pub fn population(&self)->u32 {self.tier.population as u32}
-    fn needs_workers(b:&Building)->bool {b[2]==0 && Self::worker_cost(b[1])>0}
+    fn needs_workers(&self,b:&Building)->bool {b[2]==0 && Self::worker_cost(b[1])>0 && (b[1]!=15 || self.parent(b).and_then(|id|self.buildings.iter().find(|p|p[0]==id)).map(|p|p[2]==0).unwrap_or(false))}
     fn worker_cost(kind:u32)->u32 {buildings::workers(kind as u8) as u32}
-    pub fn workers(&self)->u32 {self.buildings.iter().filter(|b|Self::needs_workers(b)).map(|b|Self::worker_cost(b[1])).sum()}
+    pub fn workers(&self)->u32 {self.buildings.iter().filter(|b|self.needs_workers(b)).map(|b|Self::worker_cost(b[1])).sum()}
     pub fn valid_sides(tile:u32,kind:u32,surfaces:&[u32],neighbors:&[u32])->u32 {
         if tile as usize>=surfaces.len(){return 0;}
         let mut mask=0;
@@ -29,10 +29,10 @@ impl Industry {
         }
         mask
     }
-    fn parent(&self,b:&Building)->Option<u32>{if buildings::farm_kind(b[1] as u8).is_none(){return None;}self.neighbors.get(b[0] as usize*6+b[6] as usize).copied()}
+    fn parent(&self,b:&Building)->Option<u32>{if buildings::attachment_parent(b[1] as u8).is_none(){return None;}self.neighbors.get(b[0] as usize*6+b[6] as usize).copied()}
     fn fields(&self,tile:u32)->u64{self.buildings.iter().filter(|b|self.parent(b)==Some(tile)).count() as u64}
     fn placement_sides(&self,tile:u32,kind:u32,surfaces:&[u32],neighbors:&[u32])->u32{
-        let Some(farm)=buildings::farm_kind(kind as u8)else{return Self::valid_sides(tile,kind,surfaces,neighbors);};
+        let Some(farm)=buildings::attachment_parent(kind as u8)else{return Self::valid_sides(tile,kind,surfaces,neighbors);};
         let mut mask=0;for side in 0..6{if let Some(&n)=neighbors.get(tile as usize*6+side){if self.buildings.iter().any(|b|b[0]==n&&b[1]==farm as u32)&&self.fields(n)<3{mask|=1<<side;}}}mask
     }
     pub fn validate(&self,tile:u32,kind:u32,surfaces:&[u32],features:&[u32],neighbors:&[u32])->u32 {
@@ -41,7 +41,7 @@ impl Industry {
         if surfaces[tile as usize]==0{return 3;}
         if kind==0 && features[tile as usize]&2==0{return 4;}
         if kind==DOCK && Self::valid_sides(tile,kind,surfaces,neighbors)==0{return 6;}
-        if buildings::farm_kind(kind as u8).is_some()&&self.placement_sides(tile,kind,surfaces,neighbors)==0{return 10;}
+        if buildings::attachment_parent(kind as u8).is_some()&&self.placement_sides(tile,kind,surfaces,neighbors)==0{return 10;}
         if self.pool[1]<Self::cost(kind){return 5;}
         0
     }
@@ -56,7 +56,7 @@ impl Industry {
     }
     pub fn allocation(&self)->Vec<u32> {
         let demand=self.workers().max(1) as u64;
-        self.buildings.iter().map(|b|if Self::needs_workers(b){(self.population() as u64*Self::worker_cost(b[1]) as u64/demand).min(Self::worker_cost(b[1]) as u64) as u32}else{0}).collect()
+        self.buildings.iter().map(|b|if self.needs_workers(b){(self.population() as u64*Self::worker_cost(b[1]) as u64/demand).min(Self::worker_cost(b[1]) as u64) as u32}else{0}).collect()
     }
     fn sync_inventory(&mut self){
         for r in 0..8{let difference=self.pool[r] as i64-self.mirror[r] as i64;self.inventory[r]=(self.inventory[r] as i128+difference as i128*Q as i128).max(0).min(production_runtime::MAX as i128) as u64;self.mirror[r]=self.pool[r];}
@@ -82,7 +82,7 @@ impl Industry {
     fn power_fulfillment(&self)->u64 {self.power_required}
     fn productivity(&self,kind:u32)->u32 {
         if buildings::power_demand(kind as u8)>0{return (self.power_fulfillment()*100/Q) as u32;}
-        if kind==10{return if self.needs.generators==0{0}else{(self.power()*100/(self.needs.generators*10*Q)) as u32};}
+        if kind==10||kind==15{return if self.needs.generators==0{0}else{(self.power()*100/(self.needs.generators*10*Q)) as u32};}
         let Some(r)=buildings::resource(kind as u8)else{return 0;};let count=self.buildings.iter().filter(|b|b[1]==kind&&b[2]==0).count() as u64;
         if count==0{0}else{(self.engine.rate(RECIPES[r])*100/(count*Q)) as u32}
     }
@@ -101,7 +101,7 @@ impl Industry {
         self.tier.houses=houses;
         self.tier.commons_covered=self.buildings.iter().filter(|b|b[1]==HOUSE&&self.is_covered(b[0])).count() as u64;
         self.needs.radio_covered=self.buildings.iter().filter(|b|b[1]==HOUSE&&self.is_covered_by(b[0],11)).count() as u64;
-        self.needs.generators=self.buildings.iter().filter(|b|b[1]==10&&b[2]==0).count() as u64;
+        self.needs.generators=self.buildings.iter().filter(|b|b[1]==10&&b[2]==0).map(|b|1+self.fields(b[0])).sum();
         self.needs.power_demand=self.buildings.iter().filter(|b|b[2]==0).map(|b|buildings::power_demand(b[1] as u8)).sum();
         if houses==0{self.tier=PopulationTier::default();}
         self.metadata_dirty=false;self.metadata_updates+=1;
@@ -112,7 +112,7 @@ impl Industry {
         if self.restoring{return;}
         self.solve_rates();self.update_progression();self.sync_inventory();self.solve_rates();
         let workers=self.workers();let population=self.population();
-        let status:Vec<_>=self.buildings.iter().map(|b|if b[2]==1{2}else if b[1]==10&&self.power_demand==0{6}else if buildings::power_demand(b[1] as u8)>0&&self.power_fulfillment()==0{5}else if Self::worker_cost(b[1])==0{0}else if workers>0&&population==0{3}else if self.productivity(b[1])==0{if buildings::resource(b[1] as u8).map(|r|self.inventory[r]>=STORAGE).unwrap_or(false){4}else{1}}else{0}).collect();
+        let status:Vec<_>=self.buildings.iter().map(|b|if b[2]==1||b[1]==15&&self.parent(b).and_then(|id|self.buildings.iter().find(|p|p[0]==id)).map(|p|p[2]!=0).unwrap_or(true){2}else if (b[1]==10||b[1]==15)&&self.power_demand==0{6}else if buildings::power_demand(b[1] as u8)>0&&self.power_fulfillment()==0{5}else if b[1]==15&&self.productivity(15)==0{1}else if Self::worker_cost(b[1])==0{0}else if workers>0&&population==0{3}else if self.productivity(b[1])==0{if buildings::resource(b[1] as u8).map(|r|self.inventory[r]>=STORAGE).unwrap_or(false){4}else{1}}else{0}).collect();
         for (b,status) in self.buildings.iter_mut().zip(status){b[5]=0;b[3]=status;}
     }
     fn unlock_population(kind:u32)->u32 {buildings::unlock_population(kind as u8) as u32}
@@ -150,7 +150,7 @@ thread_local!{static GAME:RefCell<Industry>=RefCell::new(Industry::starter());}
 #[no_mangle] pub extern "C" fn industry_valid_sides(tile:u32,kind:u32)->u32 {super::PLANET.with(|p|{let p=p.borrow();GAME.with(|g|g.borrow().placement_sides(tile,kind,&p.surfaces,&p.neighbors))})}
 #[no_mangle] pub extern "C" fn industry_build(tile:u32,kind:u32)->u32 {let mask=industry_valid_sides(tile,kind);industry_build_facing(tile,kind,mask.trailing_zeros())}
 #[no_mangle] pub extern "C" fn industry_build_facing(tile:u32,kind:u32,side:u32)->u32 {let error=industry_validate(tile,kind);if error!=0{return error;}super::PLANET.with(|p|{let p=p.borrow();GAME.with(|g|g.borrow_mut().build(tile,kind,side,&p.surfaces,&p.features,&p.neighbors))})}
-#[no_mangle] pub extern "C" fn industry_rotate(tile:u32,side:u32)->u32 {super::PLANET.with(|p|{let p=p.borrow();GAME.with(|g|{let mut g=g.borrow_mut();let Some(i)=g.buildings.iter().position(|b|b[0]==tile)else{return 1;};if buildings::farm_kind(g.buildings[i][1] as u8).is_some()||side>=6||Industry::valid_sides(tile,g.buildings[i][1],&p.surfaces,&p.neighbors)&(1<<side)==0{return 7;}g.buildings[i][6]=side;0})})}
+#[no_mangle] pub extern "C" fn industry_rotate(tile:u32,side:u32)->u32 {super::PLANET.with(|p|{let p=p.borrow();GAME.with(|g|{let mut g=g.borrow_mut();let Some(i)=g.buildings.iter().position(|b|b[0]==tile)else{return 1;};if buildings::attachment_parent(g.buildings[i][1] as u8).is_some()||side>=6||Industry::valid_sides(tile,g.buildings[i][1],&p.surfaces,&p.neighbors)&(1<<side)==0{return 7;}g.buildings[i][6]=side;0})})}
 #[no_mangle] pub extern "C" fn industry_advance(ticks:u32){GAME.with(|g|g.borrow_mut().advance(ticks));}
 #[no_mangle] pub extern "C" fn industry_pool_ptr()->*const u32 {GAME.with(|g|g.borrow().pool.as_ptr())}
 #[no_mangle] pub extern "C" fn industry_buildings_ptr()->*const u32 {GAME.with(|g|{let mut g=g.borrow_mut();for i in 0..g.buildings.len(){if g.buildings[i][1]==HOUSE{let tile=g.buildings[i][0];g.buildings[i][7]=g.residents(tile);g.buildings[i][8]=0;g.buildings[i][9]=0;g.buildings[i][10]=u32::from(g.tier.food==Q);}}g.buildings.as_ptr() as *const u32})}
@@ -175,7 +175,7 @@ thread_local!{static GAME:RefCell<Industry>=RefCell::new(Industry::starter());}
 #[no_mangle] pub extern "C" fn industry_tick()->u32 {GAME.with(|g|g.borrow().tick)}
 #[no_mangle] pub extern "C" fn industry_pause(tile:u32)->u32 {GAME.with(|g|{
     let mut g=g.borrow_mut();let Some(i)=g.buildings.iter().position(|b|b[0]==tile) else{return 1;};
-    if g.buildings[i][1]==HOUSE||buildings::farm_kind(g.buildings[i][1] as u8).is_some(){return 8;}
+    if g.buildings[i][1]==HOUSE||buildings::attachment_parent(g.buildings[i][1] as u8).is_some(){return 8;}
     g.buildings[i][2]^=1;if buildings::utility(g.buildings[i][1] as u8)||g.buildings[i][1]==10{g.metadata_dirty=true;}g.refresh();0
 })}
 #[no_mangle] pub extern "C" fn industry_remove(tile:u32){GAME.with(|g|{let mut g=g.borrow_mut();let removed:Vec<_>=g.buildings.iter().filter(|b|b[0]==tile||g.parent(b)==Some(tile)).map(|b|b[0]).collect();g.buildings.retain(|b|!removed.contains(&b[0]));g.metadata_dirty=true;let refund=removed.into_iter().map(|id|g.paid_costs.remove(&id).unwrap_or(0)).sum::<u32>();g.pool[1]=g.pool[1].saturating_add(refund);g.refresh();});}

@@ -1,6 +1,6 @@
 export function buildingStatus(building,workers) {
   if(building[1]===2)return null;
-  if(building[2])return 'paused';
+  if(building[2]||building[3]===2)return 'paused';
   if(building[1]===4)return null;
   if(building[3]===6)return 'idle';
   if(building[3]===5)return 'power';

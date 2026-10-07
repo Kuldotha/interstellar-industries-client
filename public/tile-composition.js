@@ -6,7 +6,7 @@ export const compositionTargets=[
  ['biome:1','Temperate ground','biome',1],['biome:0','Ocean floor','biome',0],['biome:2','Polar ground','biome',2],
  ['feature:1','Forest','feature',1],['feature:2','Stone deposit','feature',2],
  ['building:2','Housing','building',2],['building:3','Fishing docks','building',3],['building:0','Granule quarry','building',0],['building:1','Concrete factory','building',1],['building:4','Commons','building',4],
-["building:5","Fiber Farm","building",5],["building:6","Weaving Mill","building",6],["building:7","Tuber Farm","building",7],["building:8","Brewery","building",8],["building:9","Biomass Farm","building",9],["building:10","Biomass Generator","building",10],["building:11","Radio Station","building",11],["building:12","Fiber Field","building",12],["building:13","Tuber Field","building",13],["building:14","Biomass Field","building",14]
+["building:5","Fiber Farm","building",5],["building:6","Weaving Mill","building",6],["building:7","Tuber Farm","building",7],["building:8","Brewery","building",8],["building:9","Biomass Farm","building",9],["building:10","Biomass Power Station","building",10],["building:11","Radio Station","building",11],["building:12","Fiber Field","building",12],["building:13","Tuber Field","building",13],["building:14","Biomass Field","building",14],["building:15","Generator Module","building",15]
 ];
 export const tilePolygon=()=>Array.from({length:6},(_,i)=>tileCornerOffset(i));
 export const defaultFixed=model=>({id:crypto.randomUUID(),name:'Fixed object',model,appearance:'',position:[0,0,0],rotation:[0,0,0],scale:[1,1,1],blockScatter:true});

@@ -48,7 +48,7 @@ export function createBuildMenu({selection,showToolTarget,cost,refund,buildingAt
     document.body.classList.toggle('placing-building',active!==null||tool!==null);
     picker.hidden=chain===null;status.hidden=active===null&&tool===null;
     for(const [mode,button] of toolButtons)button.setAttribute('aria-pressed',String(tool===mode));
-    root.querySelector('#rotate-placement').hidden=tool!==null||buildingDefinitions[active]?.farm!==undefined;
+    root.querySelector('#rotate-placement').hidden=tool!==null||(buildingDefinitions[active]?.farm??buildingDefinitions[active]?.parent)!==undefined;
     root.querySelector('#placement-cost').hidden=active===null;
     for(const [kind,button] of buttons)button.setAttribute('aria-pressed',String(chains[kind]?chain===kind:active===kind));
     for(const b of picker.querySelectorAll('[data-kind]'))b.setAttribute('aria-pressed',String(Number(b.dataset.kind)===active));
@@ -83,7 +83,7 @@ export function createBuildMenu({selection,showToolTarget,cost,refund,buildingAt
       }
       render();return true;
     }
-    if(active===null)return false;hover=value;render();if(value!==null&&!placementError()){const kind=active,error=build(value,kind,side);if(!error){facingChoice.reset();const field=buildingDefinitions[kind].field;if(field!==undefined)start(field,undefined,value);}render();}return true;});
+    if(active===null)return false;hover=value;render();if(value!==null&&!placementError()){const kind=active,error=build(value,kind,side);if(!error){facingChoice.reset();const field=buildingDefinitions[kind].field??buildingDefinitions[kind].module;if(field!==undefined)start(field,undefined,value);}render();}return true;});
   document.getElementById('planet').addEventListener('pointerleave',()=>{pointerInside=false;showGhost(null);showToolTarget(null);});
   document.getElementById('planet').addEventListener('contextmenu',e=>{if(active!==null||tool||chain){e.preventDefault();cancel();}});
   window.addEventListener('keydown',e=>{if(e.key==='Escape')cancel();if(e.key.toLowerCase()==='r'&&!/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)){e.preventDefault();rotate();}});

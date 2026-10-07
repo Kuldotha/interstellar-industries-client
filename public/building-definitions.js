@@ -83,7 +83,7 @@ export const buildingDefinitions=[
     "power": 0
   },
   {
-    "name": "Biomass Generator",
+    "name": "Biomass Power Station",
     "urban": false,
     "output": "power",
     "input": "biomass",
@@ -102,11 +102,13 @@ export const buildingDefinitions=[
 ,
 {name:'Fiber Field',urban:false,output:'fibers',icon:'fibers.svg',farm:5},
 {name:'Tuber Field',urban:false,output:'tubers',icon:'tubers.svg',farm:7},
-{name:'Biomass Field',urban:false,output:'biomass',icon:'biomass.svg',farm:9}
+{name:'Biomass Field',urban:false,output:'biomass',icon:'biomass.svg',farm:9},
+{name:'Generator Module',urban:false,output:'power',input:'biomass',icon:'power.svg',parent:10}
 ];
 for(const [farm,field] of [[5,12],[7,13],[9,14]])buildingDefinitions[farm].field=field;
+buildingDefinitions[10].module=15;
 for(const kind of [0,1,3,6,8])buildingDefinitions[kind].powerBoost=true;
 export const resourceNames=["Granules","Concrete","Fish","Rough fibers","Worker clothes","Tubers","Beer","Biomass"];
 
-const buildingIcons=['quarry','concrete-factory','housing','fishing-docks','commons','fiber-farm','weaving-mill','tuber-farm','brewery','biomass-farm','biomass-generator','radio','fiber-field','tuber-field','biomass-field'];
+const buildingIcons=['quarry','concrete-factory','housing','fishing-docks','commons','fiber-farm','weaving-mill','tuber-farm','brewery','biomass-farm','biomass-generator','radio','fiber-field','tuber-field','biomass-field','biomass-generator'];
 for(const [kind,building] of buildingDefinitions.entries())building.buildingIcon=buildingIcons[kind]+'.svg';

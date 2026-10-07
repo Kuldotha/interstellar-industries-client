@@ -58,3 +58,5 @@ node tests/tile-orientation.mjs
 node tests/tier-one.mjs
 
 node tests/farms-power.mjs
+
+node tests/generator-modules.mjs

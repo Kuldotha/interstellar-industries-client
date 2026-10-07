@@ -5,7 +5,7 @@ import {buildingDefinitions} from '../public/building-definitions.js';
 import {validateCompositions,compositionTargets} from '../public/tile-composition.js';
 const json=p=>JSON.parse(readFileSync(new URL('../public/'+p,import.meta.url)));
 validateCompositions(json('configs/tile-compositions.json'),json('models/library.json'),json('models/authoring.json'));
-assert.equal(buildingDefinitions.length,15);assert.equal(compositionTargets.length,20);
+assert.equal(buildingDefinitions.length,16);assert.equal(compositionTargets.length,21);
 const {instance:{exports:c}}=await WebAssembly.instantiate(readFileSync(new URL('../public/planet_geometry.wasm',import.meta.url)),{});
 c.generate_blue(8,.02,23);c.industry_reset();c.industry_restore_progression(100,5,0,0,0);c.industry_restore_pool(0,1000,0);
 const surface=new Uint32Array(c.memory.buffer,c.surfaces_ptr(),c.tile_count()).slice();const dry=Array.from(surface.keys()).filter(t=>surface[t]);

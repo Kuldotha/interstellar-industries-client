@@ -12,7 +12,7 @@ import { subdivideBuildingGeometry, enableBuildingWrap, updateBuildingBounds } f
 import { createSimulationClock } from './simulation-clock.js';
 import { createBuildingStatuses, buildingStatus, statusLabels } from './building-status.js';
 const names=buildingDefinitions.map(building=>building.name);
-const errors=['','Invalid tile.','This tile is occupied.','Needs dry land.','Needs a stone deposit.','Not enough concrete.','Needs an adjacent water tile.','This side cannot face the building.','Housing cannot be paused.','Reach the required population to unlock this building.','Needs an adjacent farm with room for fields.'];
+const errors=['','Invalid tile.','This tile is occupied.','Needs dry land.','Needs a stone deposit.','Not enough concrete.','Needs an adjacent water tile.','This side cannot face the building.','Housing cannot be paused.','Reach the required population to unlock this building.','Needs an adjacent matching facility with room for an extension.'];
 export async function createIndustry(B,scene,shadows,core,selection,underwater,onOccupied,onGroundCover,onWaterlineChange=()=>{},chain=null,compositions=null) {
   const shadowRegistry=shadows,underwaterRegistry=underwater;
   const ui=document.getElementById('industry-actions'),stock=document.getElementById('planet-stock');
@@ -198,10 +198,15 @@ export async function createIndustry(B,scene,shadows,core,selection,underwater,o
         text.className='production-state';text.textContent=building[2]?'Paused':kind===11?(core.industry_productivity(kind)+'% broadcast coverage'):'Serving nearby homes';
         const need=document.createElement('p');need.innerHTML=`<div class="stat-row"><span>Service range</span><b>2 tiles</b></div><div class="stat-row"><span>Workers required</span><b>None</b></div><h3>Household benefits</h3><div class="stat-row"><span>Resident capacity</span><b>${kind===4?'+5':'—'}</b></div><div class="stat-row"><span>Happiness</span><b>+10</b></div><small>${kind===11?'Requires 1 power.':served+' homes served.'} Benefits do not stack.</small>`;ui.append(need);
         button(building[2]?'Resume':'Pause',()=>chain?onlineAction('pause',tile,!building[2]):act(()=>core.industry_pause(tile),false));
+      }else if(kind===15){
+        text.textContent='Generator module';const parent=core.industry_field_parent(tile);
+        button('Select power station',()=>selection.select(parent));
+        const info=document.createElement('p');info.textContent='Adds 10 power capacity. Requires 5 workers.';ui.append(info);
       }else if(buildingDefinitions[kind].farm!==undefined){
         text.textContent='Cultivated field';const parent=core.industry_field_parent(tile);
         button('Select farm',()=>selection.select(parent));
       }else{
+        if(kind===10){const count=core.industry_fields(tile),row=document.createElement('p');row.textContent=count+' / 3 generator modules';ui.append(row);button('Add generator',()=>menu.place(15,undefined,tile),count>=3);}
         if(buildingDefinitions[kind].field!==undefined){
           const fields=core.industry_fields(tile),row=document.createElement('p');row.textContent=fields+' / 3 fields';ui.append(row);
           const farm=tile;button('Add fields',()=>menu.place(buildingDefinitions[kind].field,undefined,farm),fields>=3);
@@ -210,7 +215,7 @@ export async function createIndustry(B,scene,shadows,core,selection,underwater,o
         const condition=buildingStatus(building,workers),output=buildingDefinitions[kind].output,productivity=condition?0:core.industry_productivity(kind),cycle=productivity;
         text.className='production-state';text.textContent=statusLabels[condition]||'Producing';
         const production=document.createElement('div');production.className='production-overview';
-        production.innerHTML=`<div class="recipe-row">${buildingDefinitions[kind].input?`<span class="recipe-good"><img src="icons/${buildingDefinitions[kind].input}.svg" alt="${buildingDefinitions[kind].input}"><span>${kind===10?'0.1':'1'}</span></span><span class="recipe-arrow">→</span>`:''}<span class="recipe-good"><img src="icons/${buildingDefinitions[kind].icon}" alt="${output}"><span>1</span></span></div><div class="productivity-dial ${condition?'stopped':''}" role="progressbar" aria-label="Productivity" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.floor(cycle)}" aria-valuetext="${productivity}% productivity"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="dial-track" cx="60" cy="60" r="52"/><circle class="dial-progress" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="${cycle} 100"/></svg><div><strong>${productivity}%</strong><span>Productivity</span></div></div><div class="stat-row"><span>Workers</span><b>${building[2]?0:(core.industry_worker_cost(kind)*Math.min(1,core.industry_population()/Math.max(1,core.industry_workers()))).toFixed(1)} / ${core.industry_worker_cost(kind)}</b></div><div class="stat-row"><span>${kind===10?'Power output':'Output / min'}</span><b>${(productivity/(kind===10?10:100)).toFixed(1)}</b></div>`;
+        production.innerHTML=`<div class="recipe-row">${buildingDefinitions[kind].input?`<span class="recipe-good"><img src="icons/${buildingDefinitions[kind].input}.svg" alt="${buildingDefinitions[kind].input}"><span>${kind===10?'0.1':'1'}</span></span><span class="recipe-arrow">→</span>`:''}<span class="recipe-good"><img src="icons/${buildingDefinitions[kind].icon}" alt="${output}"><span>1</span></span></div><div class="productivity-dial ${condition?'stopped':''}" role="progressbar" aria-label="Productivity" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.floor(cycle)}" aria-valuetext="${productivity}% productivity"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="dial-track" cx="60" cy="60" r="52"/><circle class="dial-progress" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="${cycle} 100"/></svg><div><strong>${productivity}%</strong><span>Productivity</span></div></div><div class="stat-row"><span>Workers</span><b>${building[2]?0:(core.industry_worker_cost(kind)*Math.min(1,core.industry_population()/Math.max(1,core.industry_workers()))).toFixed(1)} / ${core.industry_worker_cost(kind)}</b></div><div class="stat-row"><span>${kind===10?'Power output':'Output / min'}</span><b>${(productivity/(kind===10?10:100)*(kind===10?1+core.industry_fields(tile):1)).toFixed(1)}</b></div>`;
         ui.append(production);
         button(building[2]?'Resume':'Pause',()=>chain?onlineAction('pause',tile,!building[2]):act(()=>core.industry_pause(tile),false));
       }

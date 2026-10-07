@@ -10,3 +10,5 @@ console.log('Building status: paused/worker/input priority and productive low-ef
 
 assert.equal(buildingStatus([0,2,0,0,0],0),null);
 assert.equal(buildingStatus([0,3,0,3,0],0),'workers');
+
+assert.equal(buildingStatus([1,15,0,2],0),'paused');
