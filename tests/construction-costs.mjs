@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const {instance}=await WebAssembly.instantiate(readFileSync(new URL('../public/planet_geometry.wasm',import.meta.url)),{}),c=instance.exports;
+c.generate_blue(8,.02,23);c.industry_reset();c.industry_restore_progression(20,6,0,0,0);
+const count=c.tile_count(),s=new Uint32Array(c.memory.buffer,c.surfaces_ptr(),count).slice(),f=new Uint32Array(c.memory.buffer,c.features_ptr(),count).slice();
+const dry=Array.from(s.keys()).filter(i=>s[i]),quarry=dry.find(i=>f[i]&2),factory=dry.find(i=>i!==quarry),home=dry.find(i=>i!==quarry&&i!==factory);
+const pool=()=>Array.from(new Uint32Array(c.memory.buffer,c.industry_pool_ptr(),3));
+c.industry_restore_pool(0,0,0);
+for(const [tile,kind] of [[quarry,0],[factory,1],[home,2]])assert.equal(c.industry_build(tile,kind),5);
+c.industry_restore_pool(0,2,0);
+assert.equal(c.industry_build(quarry,0),0);assert.equal(c.industry_build(factory,1),0);assert.equal(pool()[1],0);
+assert.equal(c.industry_refund(quarry),1);c.industry_remove(quarry);assert.equal(pool()[1],1);c.industry_remove(quarry);assert.equal(pool()[1],1);
+c.industry_restore_cost(factory,0);c.industry_remove(factory);assert.equal(pool()[1],1);
+c.industry_restore_pool(0,3,0);assert.equal(c.industry_build(home,4),0);assert.equal(pool()[1],0);assert.equal(c.industry_refund(home),3);
+c.industry_remove(home);assert.equal(pool()[1],3);c.industry_remove(home);assert.equal(pool()[1],3);
+console.log('Construction: production costs, Commons costs, actual paid refunds, free legacy buildings and no duplicate refunds pass.');

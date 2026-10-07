@@ -1,0 +1,20 @@
+{
+  "swatches": {
+    "ocean-surface": "#355561",
+    "land-surface": "#9da94e",
+    "snow-surface": "#e8e0d0",
+    "cliff": "#847e78",
+    "rock": "#999084",
+    "bedrock": "#817e7a",
+    "tree-bark": "#755139",
+    "tree-foliage": "#566b31",
+    "building-base": "#666b67",
+    "building-wall": "#e1cdab",
+    "building-roof": "#3d7378",
+    "building-trim": "#d6ac4d",
+    "building-pile": "#8b8576",
+    "building-earth": "#b29867",
+    "house-glass": "#243e4a"
+  },
+  "water": "#258e9f"
+}

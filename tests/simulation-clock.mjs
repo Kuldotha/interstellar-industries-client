@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createSimulationClock} from '../public/simulation-clock.js';
+let total=0;const clock=createSimulationClock(ticks=>total+=ticks,0);
+clock.update(500);assert.equal(total,0);
+clock.setRate(5,1000);assert.equal(total,1);
+clock.update(2000);assert.equal(total,6);
+clock.setRate(0,2100);clock.update(102100);assert.equal(total,6);
+clock.step(60,102100);assert.equal(total,66);assert.equal(clock.getRate(),0);
+clock.setRate(1,102100);clock.update(102600);assert.equal(total,67);
+clock.setRate(60,102600);clock.update(103600);assert.equal(total,127);
+clock.reset(200000);clock.update(201000);assert.equal(total,187);
+clock.setRate(-5,201000);assert.equal(clock.getRate(),60);
+console.log('Simulation clock: rates, pause, fractional progress, manual step, rate changes and reset pass.');

@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {createGrassCollision} from '../public/editor/grass-collision.js';
+const B=createRequire(import.meta.url)('../public/vendor/babylon-9.28.0.js');
+const box=(width,height,depth,y=0)=>{const data=B.VertexData.CreateBox({width,height,depth});return {indices:Array.from(data.indices),positions:Array.from(data.positions,(v,i)=>i%3===1?v+y:v)};};
+const rock=createGrassCollision([box(1,1,1,.5)]);
+assert(rock.contains([0,.001,0]));assert(!rock.contains([.501,.001,0]));
+assert(!rock.intersects([[.501,0,-.01],[.521,0,.01],[.51,.15,0]]));
+assert(rock.intersects([[.501,0,-.01],[.521,0,.01],[.45,.15,0]]));
+assert(rock.intersects([[.5,.1,-.1],[.5,.1,.1],[.5,.3,0]]));
+const tree=createGrassCollision([box(.1,1,.1,.5),box(1,.3,1,1.1)]);
+assert(!tree.contains([.2,.001,0]));assert(!tree.intersects([[.2,0,-.01],[.22,0,.01],[.21,.15,0]]));assert(tree.contains([0,.001,0]));
+const overlapping=createGrassCollision([box(1,1,1,.5),box(.5,.5,.5,.25)]);assert(overlapping.contains([0,.1,0]));
+console.log('Grass collision: tight edge placement, leaning blade crossings, coplanar contact, canopy clearance, interior roots and overlapping solids pass.');

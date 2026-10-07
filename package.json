@@ -1,0 +1,25 @@
+{
+  "name": "interstellar-industries-client",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "PORT=8768 node serve.mjs",
+    "build": "sh build.sh",
+    "start": "NODE_ENV=production node serve.mjs",
+    "sync:protocol": "node tools/sync-protocol.mjs",
+    "build:web": "node tools/package-web.mjs",
+    "deploy:check": "npm run build:web && wrangler pages functions build --outdir .wrangler/pages-check",
+    "deploy": "npm run build:web && wrangler pages deploy dist --project-name interstellar-industries --branch main",
+    "test:browser-chain": "node tests/browser-chain.mjs"
+  },
+  "dependencies": {
+    "@solana/web3.js": "1.99.0"
+  },
+  "devDependencies": {
+    "wrangler": "4.148.0"
+  },
+  "license": "UNLICENSED"
+}

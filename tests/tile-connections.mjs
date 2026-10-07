@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {previewUrbanConnections} from '../public/editor/tile-connections.js';
+const config={id:'building:2',urbanConnections:{model:'house_01',appearance:'selected-look'}},tiles=[{x:0,z:0,height:0,config},...Array.from({length:6},(_,i)=>({x:Math.sin(i*Math.PI/3)*Math.sqrt(3)*10,z:Math.cos(i*Math.PI/3)*Math.sqrt(3)*10,height:0,config}))];
+const result=previewUrbanConnections(tiles);assert.equal(result.length,24);assert.equal(result.filter(p=>p.owner===0).length,12);assert(result.every(p=>p.object.model==='house_01'&&p.object.appearance==='selected-look'));assert.equal(new Set(result.map(p=>p.object.id)).size,24);
+assert.equal(previewUrbanConnections([tiles[0]]).length,0);
+assert.equal(previewUrbanConnections(tiles.map((t,i)=>({...t,config:i?null:t.config}))).length,0);
+assert.equal(previewUrbanConnections(tiles.map(t=>({...t,config:{id:'building:2'}}))).length,0);
+assert.equal(previewUrbanConnections(tiles.map(t=>({...t,config:{...config,id:'building:1'}}))).length,0);
+assert.equal(previewUrbanConnections(tiles.map((t,i)=>({...t,height:i?1:0}))).filter(p=>p.owner===0).length,0);
+console.log('Preview connections: 12 shared edges, two objects each, no duplicates; disabled/empty/industrial/unequal-height exclusions and configured appearance pass.');
+const customized={...config,urbanConnections:{...config.urbanConnections,count:3,spacing:2,position:[1,.4,-.5],rotation:[10,20,30],rotationStep:[0,45,0],scale:[.8,1.2,.9]}};
+const custom=previewUrbanConnections([{x:0,z:0,height:0,config:customized},{x:0,z:Math.sqrt(3)*10,height:0,config:customized}]);
+assert.equal(custom.length,3);assert.deepEqual(custom.map(o=>o.object.position[0]),[3,1,-1]);assert(custom.every(o=>o.object.position[1]===.4));assert.deepEqual(custom.map(o=>o.object.rotation),[[10,20,30],[10,65,30],[10,110,30]]);assert(custom.every(o=>JSON.stringify(o.object.scale)==='[0.8,1.2,0.9]'));
+console.log('Connection model placement: count, spacing, edge-relative offsets, per-copy rotation and scale pass.');

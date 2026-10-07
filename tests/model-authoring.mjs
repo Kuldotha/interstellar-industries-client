@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRegions,compileAppearance,validateAuthoring,geometryFingerprint} from '../public/editor/model-data.js';
+import {subdivideBuildingGeometry} from '../public/building-wrap.js';
+const json=p=>JSON.parse(readFileSync(new URL('../public/'+p,import.meta.url)));
+const parts=json('models/house_01.json').parts,palette=json('models/palette.json'),generated=createRegions(parts,palette);
+assert.equal(generated.regions.find(r=>r.id==='pink-light').faces.length,10);
+const model={fingerprint:generated.fingerprint,regions:generated.regions,ao:generated.ao},appearance={name:'House',colors:generated.colors};
+model.ao[0][0]=-2;model.ao[0][1]=3;
+const result=compileAppearance(parts,model,appearance,palette);
+assert.equal(result[0].ao[0],-2);assert.equal(result[0].ao[1],3);
+assert.equal(result[0].positions.length/3,parts[0].indices.length);
+for(const r of model.regions){const s=palette.swatches.find(s=>s.id===appearance.colors[r.id]);for(const [p,f] of r.faces)assert.deepEqual(result[p].uvs.slice(f*6,f*6+2),[s.uvCenter[0],1-s.uvCenter[1]]);}
+const shifted=structuredClone(parts);shifted[0].positions[0]+=.1;assert.notEqual(geometryFingerprint(shifted),model.fingerprint);assert.throws(()=>compileAppearance(shifted,model,appearance,palette),/mesh changed/);
+const doc={version:1,models:{house_01:model},appearances:{house:appearance},bindings:{house_01:'house'}};validateAuthoring(doc);
+const duplicate=structuredClone(doc);duplicate.models.house_01.regions[1].faces.push(model.regions[0].faces[0]);assert.throws(()=>validateAuthoring(duplicate),/overlapping/);
+const transparent=structuredClone(appearance);transparent.colors[model.regions[0].id]=palette.swatches.find(s=>s.opacity<1).id;assert.throws(()=>compileAppearance(parts,model,transparent,palette),/Transparent/);
+const triangle={positions:[0,0,0,1,0,0,0,1,0],normals:[0,0,1,0,0,1,0,0,1],uvs:[0,0,0,0,0,0],indices:[0,1,2],ao:[-2,3,1]};
+const g=subdivideBuildingGeometry(triangle,10,1);for(let i=0;i<g.ao.length;i++)assert(Math.abs(g.ao[i]-(-2+5*g.positions[i*3]+3*g.positions[i*3+1]))<1e-5);
+console.log('Authoring: palette regions, raw AO interpolation, UV seams, stale geometry and invalid assignments pass.');

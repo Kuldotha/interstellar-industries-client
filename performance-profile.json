@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-03",
+  "environment": {
+    "browser": "Brave",
+    "backend": "WebGPU",
+    "renderSize": [
+      2362,
+      1552
+    ],
+    "tiles": 642,
+    "buildings": 0,
+    "visibleGrassTufts": 45610,
+    "trees": 2356,
+    "rocks": 2120
+  },
+  "method": "Live stationary scene, sequential temporary A/B changes through developer console. First series: 220 animation frames per phase, first 41 discarded. Second series: 240 frames, first 61 discarded. Values include display scheduling. All changed settings restored and verified afterward. No application source changes.",
+  "gpuTimerAvailable": false,
+  "baselineCpuSceneRenderMs": 0.39,
+  "series1": [
+    {
+      "test": "baseline",
+      "frameMs": 23.836,
+      "fps": 41.95
+    },
+    {
+      "test": "grass hidden",
+      "frameMs": 22.765,
+      "fps": 43.93
+    },
+    {
+      "test": "scene shadows disabled",
+      "frameMs": 10.335,
+      "fps": 96.76
+    },
+    {
+      "test": "water surface hidden",
+      "frameMs": 21.596,
+      "fps": 46.3
+    },
+    {
+      "test": "water hidden and all render targets disabled (including shadow target)",
+      "frameMs": 11.732,
+      "fps": 85.24
+    },
+    {
+      "test": "half width and height rendering",
+      "frameMs": 14.06,
+      "fps": 71.12
+    },
+    {
+      "test": "baseline repeated",
+      "frameMs": 24.442,
+      "fps": 40.91
+    }
+  ],
+  "series2": [
+    {
+      "test": "PCSS baseline",
+      "frameMs": 24.394,
+      "fps": 40.99
+    },
+    {
+      "test": "PCF low quality, water and grass retained",
+      "frameMs": 12.477,
+      "fps": 80.15
+    },
+    {
+      "test": "water hidden, underwater pass retained, PCSS",
+      "frameMs": 21.972,
+      "fps": 45.51
+    },
+    {
+      "test": "water hidden, underwater pass removed, PCSS retained",
+      "frameMs": 12.849,
+      "fps": 77.83
+    },
+    {
+      "test": "PCSS with shadow map refreshed only once",
+      "frameMs": 23.652,
+      "fps": 42.28
+    }
+  ],
+  "conclusions": [
+    "Contact-hardening shadow filtering is a major present bottleneck; ordinary PCF nearly doubles frame rate in this view.",
+    "The full-resolution underwater scene pass is also expensive: removing only that pass with water already hidden saves approximately 9.1 ms.",
+    "Caching the shadow map changes frame time little; receiver shading is the stronger optimization target.",
+    "GPU limitation is inferred from controlled rendering comparisons, not a hardware GPU timestamp measurement.",
+    "This stationary empty-colony profile does not measure moving-camera grass updates, large-colony simulation, or prove which historical change caused the drop from 120 FPS."
+  ],
+  "hardShadowFollowUp": {
+    "frameMs": 12.621757322175148,
+    "fps": 79.22827023801997,
+    "method": "Same running view, shadow filter set to FILTER_NONE; 300 frames with 61 warmup frames discarded. Water shader still used its previous four-sample kernel during this measurement. Source now also reduces that to one sample. Full reload returned to wallet connection screen, so the combined change has not yet been measured."
+  }
+}

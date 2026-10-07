@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {createPlacementFacing} from '../public/placement-facing.js';
+let draws=0;const values=[.8,.2,.6,.4],facing=createPlacementFacing(()=>values[draws++%values.length]);
+const hex=[0,1,2,3,4,5];assert.equal(facing.choose(10,hex),4);
+for(let i=0;i<20;i++)assert.equal(facing.choose(10,hex),4);
+assert.equal(draws,1);assert.equal(facing.choose(11,[1,3]),1);assert.equal(facing.choose(10,hex),4);
+assert.equal(facing.rotate(10,hex),5);assert.equal(facing.choose(12,hex),5);
+assert([1,3].includes(facing.choose(11,[1,3])));
+facing.reset();assert.equal(facing.choose(10,hex),3);assert.equal(facing.choose(10,[]),0);
+assert.equal(facing.choose(20,[2]),2);assert.equal(facing.rotate(20,[2]),2);
+facing.reset(4);assert.equal(facing.choose(30,hex),4);assert([0,1,2,3,5].includes(facing.choose(30,[0,1,2,3,5])));
+console.log('Placement facing: random valid sides, stable hover, manual rotation, reset after placement, fishery restrictions and pentagon sides pass.');

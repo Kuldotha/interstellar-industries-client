@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {createGroundCover} from '../public/ground-cover.js';
+const area={center:[0,1,0],right:[1,0,0],forward:[0,0,1],scale:.1,patches:[{x:.7,z:0,yaw:Math.PI/2,halfX:.2,halfZ:.3}]};
+const point=(x,z)=>{const p=[x*.1,1,z*.1],r=Math.hypot(...p);return p.map(v=>v/r);},mask=createGroundCover([area]);
+assert.equal(mask(point(.7,0)),0);assert.equal(mask(point(.98,0)),0);assert.equal(mask(point(.7,.19)),0);
+const edge=mask(point(.7,.30));assert.ok(edge>0&&edge<1);
+assert.equal(mask(point(.7,.5)),1);assert.equal(mask([0,-1,0]),1);
+assert.equal(createGroundCover([])(point(.7,0)),1);
+assert.equal(createGroundCover([area,{...area,patches:[{...area.patches[0],x:1.5}]}])(point(1.5,0)),0);
+console.log('Ground cover: rotated curved patches exclude grass, taper outside edges, combine across houses and restore after removal.');
+const polygonArea={...area,patches:[{x:0,z:0,yaw:0,halfX:.7,halfZ:.7,edges:[{a:[-.5,0],n:[1,0],margin:0},{a:[.5,0],n:[-1,0],margin:0},{a:[0,-.5],n:[0,1],margin:0},{a:[0,.5],n:[0,-1],margin:0}]}]};
+const polygonMask=createGroundCover([polygonArea]);assert.equal(polygonMask(point(0,0)),0);assert.equal(polygonMask(point(.8,0)),1);assert(polygonMask.cells.has(polygonMask.key(point(0,0))));

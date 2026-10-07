@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {paintRegions,historyShortcut} from '../public/editor/region-editing.js';
+const initial=[{id:'wall',faces:[[0,0]]},{id:'roof',faces:[[0,1]]}];
+const r=structuredClone(initial);
+assert(paintRegions(r,'wall',[[0,1],[0,2]]));assert.deepEqual(r,[{id:'wall',faces:[[0,0],[0,2]]},{id:'roof',faces:[[0,1]]}]);
+assert.equal(paintRegions(r,'wall',[[0,0],[0,1]]),false);
+assert(paintRegions(r,'wall',[[0,1]],{erase:true,unassigned:true}));assert.deepEqual(r[1].faces,[]);
+assert(paintRegions(r,'wall',[[0,1]]));assert.deepEqual(r[0].faces,[[0,0],[0,2],[0,1]]);
+assert(paintRegions(r,'roof',[[0,0]],{unassigned:false}));assert.deepEqual(r[1].faces,[[0,0]]);
+assert.equal(historyShortcut({ctrlKey:true,code:'KeyZ'}),'undo');assert.equal(historyShortcut({ctrlKey:true,code:'KeyY'}),'redo');
+assert.equal(historyShortcut({altKey:true,code:'KeyZ',key:'Ω'}),'undo');assert.equal(historyShortcut({altKey:true,shiftKey:true,code:'KeyZ',key:'¸'}),'redo');
+assert.equal(historyShortcut({metaKey:true,shiftKey:true,code:'KeyZ'}),'redo');assert.equal(historyShortcut({code:'KeyZ'}),null);
+console.log('Region painting: unassigned protection, clearing, overwrite mode and Windows/Mac history shortcuts pass.');

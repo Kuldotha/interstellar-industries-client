@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRegions,compileAppearance,unassignedRegion,UNASSIGNED_REGION_ID,validateAuthoring} from '../public/editor/model-data.js';
+import {paintRegions} from '../public/editor/region-editing.js';
+const palette=JSON.parse(readFileSync(new URL('../public/models/palette.json',import.meta.url)));
+const parts=[{positions:[0,0,0,1,0,0,0,1,0],normals:[0,0,1,0,0,1,0,0,1],indices:[0,1,2],uvs:[0,0,0,0,0,0]}];
+const model=createRegions(parts,palette),appearance={name:'Test',colors:{...model.colors}};
+assert.equal(unassignedRegion(parts,model).faces.length,0);
+paintRegions(model.regions,'',[[0,0]],{erase:true});
+assert.deepEqual(unassignedRegion(parts,model).faces,[[0,0]]);
+const swatch=palette.swatches.find(s=>s.opacity===1);
+appearance.colors[UNASSIGNED_REGION_ID]=swatch.id;
+const saved=JSON.parse(JSON.stringify({version:1,models:{test:model},appearances:{test:appearance},bindings:{test:'test'}}));
+validateAuthoring(saved);
+assert.deepEqual(compileAppearance(parts,saved.models.test,saved.appearances.test,palette)[0].uvs.slice(0,2),[swatch.uvCenter[0],1-swatch.uvCenter[1]]);
+assert(paintRegions(model.regions,model.regions[0].id,[[0,0]],{unassigned:true}));
+assert.equal(unassignedRegion(parts,model).faces.length,0);
+console.log('Unassigned: derived membership, saved color, and painting protection pass.');
+const empty=compileAppearance(parts,saved.models.test,saved.appearances.test,palette,{includeUnassigned:false})[0];
+assert.equal(empty.indices.length,0);assert.equal(empty.positions.length,0);
+const mixed=[{positions:[...parts[0].positions,...parts[0].positions.map(v=>v+2)],normals:[...parts[0].normals,...parts[0].normals],indices:[0,1,2,3,4,5],uvs:Array(12).fill(0)}];
+const mixedModel=createRegions(mixed,palette),mixedAppearance={name:'Mixed',colors:mixedModel.colors};
+paintRegions(mixedModel.regions,'',[[0,0]],{erase:true});mixedModel.ao[0]=[0,0,0,.3,.6,.9];
+const game=compileAppearance(mixed,mixedModel,mixedAppearance,palette,{includeUnassigned:false})[0];
+assert.deepEqual(game.indices,[0,1,2]);assert.deepEqual(game.positions,mixed[0].positions.slice(9));assert.deepEqual(game.ao,[.3,.6,.9]);
+assert.equal(compileAppearance(mixed,mixedModel,mixedAppearance,palette)[0].indices.length,6);
+const originalFetch=globalThis.fetch;
+try{
+ globalThis.fetch=async url=>({ok:true,json:async()=>url.includes('library')?{models:[]}:{version:1,models:{mixed:mixedModel},appearances:{mixed:mixedAppearance},bindings:{mixed:'mixed'}}});
+ const {authoredParts}=await import('../public/editor/model-data.js');
+ assert.deepEqual((await authoredParts('mixed',mixed,palette))[0],game);
+}finally{globalThis.fetch=originalFetch;}
+console.log('Game excludes unassigned geometry; editor retains faces; compact indices and AO remain aligned.');

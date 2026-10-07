@@ -1,0 +1,81 @@
+{
+  "id": "blue-home",
+  "name": "Blue Homeworld",
+  "access": "free starter planet",
+  "role": "Tutorial planet and primary population home",
+  "strength": "Food production",
+  "limitation": "Limited heavy industry; expand to other planets",
+  "seed": 1701,
+  "landVariation": 0.08,
+  "water": {
+    "heightInLevels": 0.65,
+    "color": [
+      0.1450980392156863,
+      0.5568627450980392,
+      0.6235294117647059,
+      1
+    ],
+    "sectionScale": 1,
+    "retainTerrain": true
+  },
+  "biome": {
+    "id": "blue",
+    "name": "Blue temperate",
+    "scope": "planet",
+    "resourceRules": "Planet-wide; local terrain does not assign resource access"
+  },
+  "surfaces": [
+    {
+      "id": "ocean",
+      "name": "Ocean",
+      "color": [
+        0.20784313725490197,
+        0.3333333333333333,
+        0.3803921568627451,
+        1
+      ],
+      "cliff": [
+        0.5176470588235295,
+        0.49411764705882355,
+        0.47058823529411764,
+        1
+      ],
+      "water": true
+    },
+    {
+      "id": "land",
+      "name": "Land",
+      "color": [
+        0.615686274509804,
+        0.6627450980392157,
+        0.3058823529411765,
+        1
+      ],
+      "cliff": [
+        0.5176470588235295,
+        0.49411764705882355,
+        0.47058823529411764,
+        1
+      ],
+      "water": false
+    },
+    {
+      "id": "snow",
+      "name": "Polar snow",
+      "color": [
+        0.9098039215686274,
+        0.8784313725490196,
+        0.8156862745098039,
+        1
+      ],
+      "cliff": [
+        0.5176470588235295,
+        0.49411764705882355,
+        0.47058823529411764,
+        1
+      ],
+      "water": false,
+      "featureRegion": "polar"
+    }
+  ]
+}

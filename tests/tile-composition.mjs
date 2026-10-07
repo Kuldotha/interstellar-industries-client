@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {generateComposition,validateCompositions,tilePolygon,pointInPolygon,defaultFixed,defaultScatter,tileConfigurations} from '../public/tile-composition.js';
+const json=p=>JSON.parse(readFileSync(new URL('../public/'+p,import.meta.url)));
+const data=json('configs/tile-compositions.json'),library=json('models/library.json'),authoring=json('models/authoring.json');
+validateCompositions(data,library,authoring);
+const scatter={...defaultScatter('tree_temperate_01'),id:'trees',count:[20,20],spacing:2,margin:.5,scale:[.8,1.2]},fixed={...defaultFixed('house_01'),id:'house',position:[2,1,3],rotation:[0,90,0],scale:[1,2,1]},config={fixed:[fixed],scatter:[scatter]},options={footprints:{house_01:3,tree_temperate_01:.3}};
+const a=generateComposition(config,73,options),b=generateComposition(config,73,options),c=generateComposition(config,74,options);
+assert.deepEqual(a,b);assert.notDeepEqual(a,c);assert.deepEqual(a.objects[0].position,[2,1,3]);assert.deepEqual(a.objects[0].scale,[1,2,1]);
+for(const o of a.objects.slice(1)){assert(pointInPolygon(o.position[0],o.position[2],tilePolygon()));assert(o.scale.every(x=>x>=.8&&x<=1.2));assert(Math.hypot(o.position[0]-2,o.position[2]-3)>=3+.3*o.scale[0]);}
+for(let i=1;i<a.objects.length;i++)for(let j=i+1;j<a.objects.length;j++)assert(Math.hypot(a.objects[i].position[0]-a.objects[j].position[0],a.objects[i].position[2]-a.objects[j].position[2])>=2);
+assert.equal(generateComposition(config,73,{...options,water:true}).objects.length,1);
+const crowded=generateComposition({fixed:[],scatter:[{...scatter,count:[256,256],spacing:30}]},1);assert.equal(crowded.objects.length,1);assert.equal(crowded.missed[0].requested,256);
+const invalid=structuredClone(data);invalid.configs[0].scatter=[{...scatter,count:[0,1e8]}];assert.throws(()=>validateCompositions(invalid,library,authoring),/scatter/);
+const active=structuredClone(data);active.configs.forEach(c=>c.enabled=true);assert.deepEqual(tileConfigurations(active,1,1).map(c=>c.id),['feature:1']);assert.deepEqual(tileConfigurations(active,1,0).map(c=>c.id),['biome:1']);
+console.log('Tile composition: deterministic placement, spacing, fixed transforms, water rules, bounded saturation and validation pass.');
+const first={...defaultScatter('rock_small_01'),id:'first',count:[3,3],spacing:0,margin:0},second={...defaultScatter('rock_small_02'),id:'second',count:[7,7],spacing:0,margin:0};
+const perProp=generateComposition({fixed:[],scatter:[first,second]},17).objects;
+assert.equal(perProp.filter(o=>o.model==='rock_small_01').length,3);assert.equal(perProp.filter(o=>o.model==='rock_small_02').length,7);
+assert.equal(generateComposition({fixed:[],scatter:[]},17).objects.length,0);
+const mixed=structuredClone(data);mixed.configs[0].scatter=[{...first,models:['rock_small_01','rock_small_02']}];assert.throws(()=>validateCompositions(mixed,library,authoring),/scatter/);
+console.log('Independent per-prop counts, combined total, empty configurations and single-model validation pass.');
+const randomized={...fixed,randomRotation:[[0,0],[-180,180],[0,0]]},fixedConfig={fixed:[randomized],scatter:[]};
+const rotated=generateComposition(fixedConfig,1).objects[0];assert.deepEqual(rotated.position,fixed.position);assert.equal(rotated.rotation[0],fixed.rotation[0]);assert.equal(rotated.rotation[2],fixed.rotation[2]);assert(rotated.rotation[1]>=fixed.rotation[1]-180&&rotated.rotation[1]<=fixed.rotation[1]+180);assert.deepEqual(rotated,generateComposition(fixedConfig,1).objects[0]);assert.notEqual(rotated.rotation[1],generateComposition(fixedConfig,2).objects[0].rotation[1]);assert.deepEqual(randomized.rotation,fixed.rotation);
+const badRotation=structuredClone(data);badRotation.configs[0].fixed=[{...fixed,model:library.models.find(m=>m.active).id,appearance:'',randomRotation:[[5,1],[0,0],[0,0]]}];assert.throws(()=>validateCompositions(badRotation,library,authoring),/random rotation/);
+console.log('Fixed random rotation: deterministic per seed, bounded axes, unchanged position/base rotation and validation pass.');

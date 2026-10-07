@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {missingCompositionModels,replaceCompositionModel,availableComposition} from '../public/composition-references.js';
+import {compositionTargets,defaultFixed,defaultScatter,validateCompositions} from '../public/tile-composition.js';
+const library={models:[{id:'removed',name:'Deleted House',active:false},{id:'replacement',name:'New House',active:true}]},authoring={appearances:{old:{}}};
+const data={version:1,configs:compositionTargets.map(([id])=>({id,fixed:[],scatter:[]}))};
+const house=data.configs.find(c=>c.id==='building:2'),forest=data.configs.find(c=>c.id==='feature:1'),commons=data.configs.find(c=>c.id==='building:4');
+house.fixed=[{...defaultFixed('removed'),name:'Cottage 1',appearance:'old',position:[2,0,3]}];forest.scatter=[defaultScatter('removed')];commons.urbanConnections={model:'removed',appearance:'old'};
+assert.equal(missingCompositionModels(data,library)[0].uses.length,3);
+assert.throws(()=>validateCompositions(data,library,authoring),/Deleted House.*Housing \/ Cottage 1.*Commons \/ Connections/);
+assert.equal(availableComposition(house,library).fixed.length,0);assert.equal(availableComposition(forest,library).scatter.length,0);assert.equal(availableComposition(commons,library).urbanConnections,undefined);
+assert.equal(house.fixed.length,1);
+replaceCompositionModel(data,'removed','replacement');
+assert.deepEqual(house.fixed[0].position,[2,0,3]);assert.equal(house.fixed[0].appearance,'');assert.equal(forest.scatter[0].models[0],'replacement');assert.equal(commons.urbanConnections.model,'replacement');
+assert.equal(missingCompositionModels(data,library).length,0);validateCompositions(data,library,authoring);
+console.log('Missing models: precise affected entries, safe preview filtering, replacement across fixed/scatter/connections, preserved placement, successful validation.');

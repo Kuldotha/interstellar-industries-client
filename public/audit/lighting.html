@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8"><title>Lighting calibration</title>
+<style>body{background:#11191f;color:#eee;font:15px system-ui;margin:24px}canvas,img{width:960px;max-width:100%;height:120px}table{border-collapse:collapse}td,th{padding:6px 14px;text-align:left}pre{white-space:pre-wrap}.hidden{position:absolute;left:-2000px}</style>
+<h1>Lighting calibration</h1><p>Identical palette colors rendered as flat PBR swatches. Each pair compares the palette texture with the terrain vertex-color path.</p><div id="results"></div><pre id="status">Rendering…</pre><canvas id="render" width="960" height="120" class="hidden"></canvas>
+<script src="../vendor/babylon-9.28.0.js"></script><script type="module">
+import {lightingStyle} from '../lighting.js';
+import {loadPalette,opaqueMaterial,groundMaterial,applySwatch} from '../palette-material.js';
+const B=BABYLON,canvas=document.querySelector('#render'),results=document.querySelector('#results');
+try{
+let engine;if(new URLSearchParams(location.search).get('backend')==='webgpu'){engine=new B.WebGPUEngine(canvas,{preserveDrawingBuffer:true});await engine.initAsync();}else{engine=new B.Engine(canvas,true,{preserveDrawingBuffer:true});}const scene=new B.Scene(engine);scene.clearColor=new B.Color4(.03,.03,.03,1);
+// Asset paths are relative to the document URL.
+const base=document.createElement('base');base.href='../';document.head.append(base);
+await loadPalette(B,scene);scene.environmentIntensity=0;
+const camera=new B.FreeCamera('camera',new B.Vector3(0,0,-20),scene);camera.setTarget(new B.Vector3(0,0,-10));camera.mode=B.Camera.ORTHOGRAPHIC_CAMERA;camera.orthoLeft=-8;camera.orthoRight=8;camera.orthoTop=1;camera.orthoBottom=-1;
+const sun=new B.DirectionalLight('sun',new B.Vector3(0,0,1),scene);scene.metadata.lighting={sun,fill:0};
+const ids=['land-surface','tree-foliage','building-wall','building-roof','rock','building-trim','snow-surface','bedrock'];
+const materials=[],meshes=[];
+for(let i=0;i<ids.length;i++)for(let path=0;path<2;path++){
+const swatch=scene.metadata.palette.swatches.find(s=>s.id===ids[i]);const mesh=B.MeshBuilder.CreatePlane('swatch',{size:.85},scene);mesh.position.x=-7.5+i*2+path;mesh.position.z=-10;
+const material=path?groundMaterial(B,scene,'vertex'):opaqueMaterial(B,scene,'atlas',null,{atlas:true});
+if(path){mesh.setVerticesData('color',Array.from({length:4},()=>[...swatch.rgb,1]).flat());mesh.material=material;}else applySwatch(B,mesh,swatch,material);
+materials.push(material);meshes.push(mesh);
+}
+const reports=[];
+for(const [label,ambient,intensity,warm,unlit,f0=1,fill=0] of [['Palette reference',0,0,false,true],['Ambient 0.8, sun 1.15',.8,1.15,true,false],['Direct only: sun 1.15',0,1.15,true,false],['Neutral key: sun π × 0.9',0,Math.PI*.9,false,false],['Neutral key, restrained dielectric reflection',0,Math.PI*.95,false,false,.25],['Calibrated lighting',0,lightingStyle.sun,false,false,lightingStyle.dielectricReflection,lightingStyle.fill]]){
+scene.ambientColor=new B.Color3(ambient,ambient,ambient);scene.metadata.lighting.fill=fill;for(const m of materials)m.ambientColor=B.Color3.White();sun.intensity=intensity;sun.diffuse=warm?new B.Color3(1,.94,.82):B.Color3.White();for(const m of materials){m.unlit=unlit;m.metallicF0Factor=f0;}
+await scene.whenReadyAsync();await Promise.all(materials.map((m,i)=>m.forceCompilationAsync(meshes[i])));scene.render();scene.render();const pixels=await engine.readPixels(0,0,960,120);if(engine.isWebGPU)for(let i=0;i<pixels.length;i+=4){const r=pixels[i];pixels[i]=pixels[i+2];pixels[i+2]=r;}const display=document.createElement('canvas');display.width=960;display.height=120;display.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(pixels),960,120),0,0);
+const heading=document.createElement('h2');heading.textContent=label;results.append(heading,display);
+const samples=ids.map((id,i)=>{const rgb=path=>Array.from(pixels.slice((60*960+i*120+30+path*60)*4,(60*960+i*120+30+path*60)*4+3));return {id,atlas:rgb(0),vertex:rgb(1)};});reports.push({label,samples});
+}
+document.querySelector('#status').textContent=JSON.stringify(reports,null,2);scene.dispose();engine.dispose();
+}catch(e){document.querySelector('#status').textContent=String(e);console.error(e);}
+</script>

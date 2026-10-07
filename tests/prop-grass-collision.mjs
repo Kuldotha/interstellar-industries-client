@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {createPropGrassCollision} from '../public/prop-grass-collision.js';
+const require=createRequire(import.meta.url),B=require('../public/vendor/babylon-9.28.0.js');
+const data=B.VertexData.CreateBox({size:1});
+const model={positions:Array.from(data.positions),indices:Array.from(data.indices)};
+const transform=B.Matrix.Compose(new B.Vector3(.007,.012,.009),B.Quaternion.RotationYawPitchRoll(.4,1.2,.7),new B.Vector3(.9,.3,.2));
+const collision=createPropGrassCollision(B,[model],{count:1,groups:[0],matrices:transform.toArray(),owners:new Uint32Array([12,13,14])});
+assert.deepEqual(collision.blockers(transform,[.49,0,0,.51,0,0,.49,.2,0]),[[12,13,14]]);
+assert.deepEqual(collision.blockers(transform,[.51,0,0,.53,0,0,.51,.2,0]),[]);
+assert.deepEqual(collision.blockers(transform,[0,0,0,.01,0,0,0,.1,0]),[[12,13,14]]);
+console.log('Planet grass collision: rotated, scaled props, close clearance and interior blades pass.');

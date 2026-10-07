@@ -1,0 +1,5907 @@
+{
+  "width": 1024,
+  "height": 1024,
+  "columns": 16,
+  "rows": 16,
+  "cellSize": 64,
+  "origin": "UV bottom-left; rows top-to-bottom",
+  "ao": {
+    "darkEnd": 0.4375,
+    "lightStart": 0.5625,
+    "uvChannel": 2,
+    "whiteUV": [
+      1,
+      0.5
+    ]
+  },
+  "swatches": [
+    {
+      "id": "warm-neutrals-01",
+      "name": "Warm neutrals 01",
+      "group": "Warm neutrals",
+      "color": "#171f23",
+      "rgb": [
+        0.09019607843137255,
+        0.12156862745098039,
+        0.13725490196078433
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-02",
+      "name": "Warm neutrals 02",
+      "group": "Warm neutrals",
+      "color": "#20282b",
+      "rgb": [
+        0.12549019607843137,
+        0.1568627450980392,
+        0.16862745098039217
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-03",
+      "name": "Warm neutrals 03",
+      "group": "Warm neutrals",
+      "color": "#283133",
+      "rgb": [
+        0.1568627450980392,
+        0.19215686274509805,
+        0.2
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-04",
+      "name": "Warm neutrals 04",
+      "group": "Warm neutrals",
+      "color": "#31393b",
+      "rgb": [
+        0.19215686274509805,
+        0.2235294117647059,
+        0.23137254901960785
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-05",
+      "name": "Warm neutrals 05",
+      "group": "Warm neutrals",
+      "color": "#394243",
+      "rgb": [
+        0.2235294117647059,
+        0.25882352941176473,
+        0.2627450980392157
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-06",
+      "name": "Warm neutrals 06",
+      "group": "Warm neutrals",
+      "color": "#424b4b",
+      "rgb": [
+        0.25882352941176473,
+        0.29411764705882354,
+        0.29411764705882354
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-07",
+      "name": "Warm neutrals 07",
+      "group": "Warm neutrals",
+      "color": "#555d5b",
+      "rgb": [
+        0.3333333333333333,
+        0.36470588235294116,
+        0.3568627450980392
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.96875
+      ]
+    },
+    {
+      "id": "building-base",
+      "name": "Sage gray",
+      "group": "Warm neutrals",
+      "color": "#666b67",
+      "rgb": [
+        0.4,
+        0.4196078431372549,
+        0.403921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-09",
+      "name": "Warm neutrals 09",
+      "group": "Warm neutrals",
+      "color": "#7a807a",
+      "rgb": [
+        0.47843137254901963,
+        0.5019607843137255,
+        0.47843137254901963
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-10",
+      "name": "Warm neutrals 10",
+      "group": "Warm neutrals",
+      "color": "#8d918a",
+      "rgb": [
+        0.5529411764705883,
+        0.5686274509803921,
+        0.5411764705882353
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-11",
+      "name": "Warm neutrals 11",
+      "group": "Warm neutrals",
+      "color": "#a0a39a",
+      "rgb": [
+        0.6274509803921569,
+        0.6392156862745098,
+        0.6039215686274509
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-12",
+      "name": "Warm neutrals 12",
+      "group": "Warm neutrals",
+      "color": "#aeafa5",
+      "rgb": [
+        0.6823529411764706,
+        0.6862745098039216,
+        0.6470588235294118
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-13",
+      "name": "Warm neutrals 13",
+      "group": "Warm neutrals",
+      "color": "#bdbbb0",
+      "rgb": [
+        0.7411764705882353,
+        0.7333333333333333,
+        0.6901960784313725
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-14",
+      "name": "Warm neutrals 14",
+      "group": "Warm neutrals",
+      "color": "#cbc8ba",
+      "rgb": [
+        0.796078431372549,
+        0.7843137254901961,
+        0.7294117647058823
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.96875
+      ]
+    },
+    {
+      "id": "warm-neutrals-15",
+      "name": "Warm neutrals 15",
+      "group": "Warm neutrals",
+      "color": "#dad4c5",
+      "rgb": [
+        0.8549019607843137,
+        0.8313725490196079,
+        0.7725490196078432
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.96875
+      ]
+    },
+    {
+      "id": "snow-surface",
+      "name": "Warm ivory",
+      "group": "Warm neutrals",
+      "color": "#e8e0d0",
+      "rgb": [
+        0.9098039215686274,
+        0.8784313725490196,
+        0.8156862745098039
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 0,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.96875
+      ]
+    },
+    {
+      "id": "stone-01",
+      "name": "Stone 01",
+      "group": "Stone",
+      "color": "#272d35",
+      "rgb": [
+        0.15294117647058825,
+        0.17647058823529413,
+        0.20784313725490197
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-02",
+      "name": "Stone 02",
+      "group": "Stone",
+      "color": "#31363e",
+      "rgb": [
+        0.19215686274509805,
+        0.21176470588235294,
+        0.24313725490196078
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-03",
+      "name": "Stone 03",
+      "group": "Stone",
+      "color": "#3a3f47",
+      "rgb": [
+        0.22745098039215686,
+        0.24705882352941178,
+        0.2784313725490196
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-04",
+      "name": "Stone 04",
+      "group": "Stone",
+      "color": "#44484f",
+      "rgb": [
+        0.26666666666666666,
+        0.2823529411764706,
+        0.30980392156862746
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-05",
+      "name": "Stone 05",
+      "group": "Stone",
+      "color": "#4d5158",
+      "rgb": [
+        0.30196078431372547,
+        0.3176470588235294,
+        0.34509803921568627
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-06",
+      "name": "Stone 06",
+      "group": "Stone",
+      "color": "#575a61",
+      "rgb": [
+        0.3411764705882353,
+        0.35294117647058826,
+        0.3803921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-07",
+      "name": "Stone 07",
+      "group": "Stone",
+      "color": "#646568",
+      "rgb": [
+        0.39215686274509803,
+        0.396078431372549,
+        0.40784313725490196
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-08",
+      "name": "Stone 08",
+      "group": "Stone",
+      "color": "#71706f",
+      "rgb": [
+        0.44313725490196076,
+        0.4392156862745098,
+        0.43529411764705883
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.90625
+      ]
+    },
+    {
+      "id": "bedrock",
+      "name": "Taupe gray",
+      "group": "Stone",
+      "color": "#817e7a",
+      "rgb": [
+        0.5058823529411764,
+        0.49411764705882355,
+        0.47843137254901963
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.90625
+      ]
+    },
+    {
+      "id": "cliff",
+      "name": "Warm gray",
+      "group": "Stone",
+      "color": "#847e78",
+      "rgb": [
+        0.5176470588235295,
+        0.49411764705882355,
+        0.47058823529411764
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.90625
+      ]
+    },
+    {
+      "id": "building-pile",
+      "name": "Stone beige",
+      "group": "Stone",
+      "color": "#8b8576",
+      "rgb": [
+        0.5450980392156862,
+        0.5215686274509804,
+        0.4627450980392157
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.90625
+      ]
+    },
+    {
+      "id": "rock",
+      "name": "Sandstone",
+      "group": "Stone",
+      "color": "#999084",
+      "rgb": [
+        0.6,
+        0.5647058823529412,
+        0.5176470588235295
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-13",
+      "name": "Stone 13",
+      "group": "Stone",
+      "color": "#b4ac9e",
+      "rgb": [
+        0.7058823529411765,
+        0.6745098039215687,
+        0.6196078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-14",
+      "name": "Stone 14",
+      "group": "Stone",
+      "color": "#c2baac",
+      "rgb": [
+        0.7607843137254902,
+        0.7294117647058823,
+        0.6745098039215687
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-15",
+      "name": "Stone 15",
+      "group": "Stone",
+      "color": "#cfc8b9",
+      "rgb": [
+        0.8117647058823529,
+        0.7843137254901961,
+        0.7254901960784313
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.90625
+      ]
+    },
+    {
+      "id": "stone-16",
+      "name": "Stone 16",
+      "group": "Stone",
+      "color": "#ddd6c6",
+      "rgb": [
+        0.8666666666666667,
+        0.8392156862745098,
+        0.7764705882352941
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 1,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.90625
+      ]
+    },
+    {
+      "id": "earth-and-bark-01",
+      "name": "Earth and bark 01",
+      "group": "Earth and bark",
+      "color": "#30271f",
+      "rgb": [
+        0.18823529411764706,
+        0.15294117647058825,
+        0.12156862745098039
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-02",
+      "name": "Earth and bark 02",
+      "group": "Earth and bark",
+      "color": "#3a2d22",
+      "rgb": [
+        0.22745098039215686,
+        0.17647058823529413,
+        0.13333333333333333
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-03",
+      "name": "Earth and bark 03",
+      "group": "Earth and bark",
+      "color": "#443225",
+      "rgb": [
+        0.26666666666666666,
+        0.19607843137254902,
+        0.1450980392156863
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-04",
+      "name": "Earth and bark 04",
+      "group": "Earth and bark",
+      "color": "#4e3827",
+      "rgb": [
+        0.3058823529411765,
+        0.2196078431372549,
+        0.15294117647058825
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-05",
+      "name": "Earth and bark 05",
+      "group": "Earth and bark",
+      "color": "#583d2a",
+      "rgb": [
+        0.34509803921568627,
+        0.23921568627450981,
+        0.16470588235294117
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-06",
+      "name": "Earth and bark 06",
+      "group": "Earth and bark",
+      "color": "#62432d",
+      "rgb": [
+        0.3843137254901961,
+        0.2627450980392157,
+        0.17647058823529413
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.84375
+      ]
+    },
+    {
+      "id": "tree-bark",
+      "name": "Chestnut brown",
+      "group": "Earth and bark",
+      "color": "#755139",
+      "rgb": [
+        0.4588235294117647,
+        0.3176470588235294,
+        0.2235294117647059
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-08",
+      "name": "Earth and bark 08",
+      "group": "Earth and bark",
+      "color": "#7b5b3c",
+      "rgb": [
+        0.4823529411764706,
+        0.3568627450980392,
+        0.23529411764705882
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-09",
+      "name": "Earth and bark 09",
+      "group": "Earth and bark",
+      "color": "#886743",
+      "rgb": [
+        0.5333333333333333,
+        0.403921568627451,
+        0.2627450980392157
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-10",
+      "name": "Earth and bark 10",
+      "group": "Earth and bark",
+      "color": "#94734b",
+      "rgb": [
+        0.5803921568627451,
+        0.45098039215686275,
+        0.29411764705882354
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-11",
+      "name": "Earth and bark 11",
+      "group": "Earth and bark",
+      "color": "#a17f52",
+      "rgb": [
+        0.6313725490196078,
+        0.4980392156862745,
+        0.3215686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.84375
+      ]
+    },
+    {
+      "id": "building-earth",
+      "name": "Sandy ochre",
+      "group": "Earth and bark",
+      "color": "#b29867",
+      "rgb": [
+        0.6980392156862745,
+        0.596078431372549,
+        0.403921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-13",
+      "name": "Earth and bark 13",
+      "group": "Earth and bark",
+      "color": "#bea276",
+      "rgb": [
+        0.7450980392156863,
+        0.6352941176470588,
+        0.4627450980392157
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-14",
+      "name": "Earth and bark 14",
+      "group": "Earth and bark",
+      "color": "#cdb389",
+      "rgb": [
+        0.803921568627451,
+        0.7019607843137254,
+        0.5372549019607843
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-15",
+      "name": "Earth and bark 15",
+      "group": "Earth and bark",
+      "color": "#dbc59b",
+      "rgb": [
+        0.8588235294117647,
+        0.7725490196078432,
+        0.6078431372549019
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.84375
+      ]
+    },
+    {
+      "id": "earth-and-bark-16",
+      "name": "Earth and bark 16",
+      "group": "Earth and bark",
+      "color": "#ead6ad",
+      "rgb": [
+        0.9176470588235294,
+        0.8392156862745098,
+        0.6784313725490196
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 2,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.84375
+      ]
+    },
+    {
+      "id": "meadow-01",
+      "name": "Meadow 01",
+      "group": "Meadow",
+      "color": "#303c21",
+      "rgb": [
+        0.18823529411764706,
+        0.23529411764705882,
+        0.12941176470588237
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-02",
+      "name": "Meadow 02",
+      "group": "Meadow",
+      "color": "#384624",
+      "rgb": [
+        0.2196078431372549,
+        0.27450980392156865,
+        0.1411764705882353
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-03",
+      "name": "Meadow 03",
+      "group": "Meadow",
+      "color": "#415126",
+      "rgb": [
+        0.2549019607843137,
+        0.3176470588235294,
+        0.14901960784313725
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-04",
+      "name": "Meadow 04",
+      "group": "Meadow",
+      "color": "#495b29",
+      "rgb": [
+        0.28627450980392155,
+        0.3568627450980392,
+        0.1607843137254902
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-05",
+      "name": "Meadow 05",
+      "group": "Meadow",
+      "color": "#52662b",
+      "rgb": [
+        0.3215686274509804,
+        0.4,
+        0.16862745098039217
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-06",
+      "name": "Meadow 06",
+      "group": "Meadow",
+      "color": "#5a702e",
+      "rgb": [
+        0.35294117647058826,
+        0.4392156862745098,
+        0.1803921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-07",
+      "name": "Meadow 07",
+      "group": "Meadow",
+      "color": "#657932",
+      "rgb": [
+        0.396078431372549,
+        0.4745098039215686,
+        0.19607843137254902
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-08",
+      "name": "Meadow 08",
+      "group": "Meadow",
+      "color": "#708236",
+      "rgb": [
+        0.4392156862745098,
+        0.5098039215686274,
+        0.21176470588235294
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-09",
+      "name": "Meadow 09",
+      "group": "Meadow",
+      "color": "#7a8a3b",
+      "rgb": [
+        0.47843137254901963,
+        0.5411764705882353,
+        0.23137254901960785
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-10",
+      "name": "Meadow 10",
+      "group": "Meadow",
+      "color": "#85933f",
+      "rgb": [
+        0.5215686274509804,
+        0.5764705882352941,
+        0.24705882352941178
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-11",
+      "name": "Meadow 11",
+      "group": "Meadow",
+      "color": "#909c43",
+      "rgb": [
+        0.5647058823529412,
+        0.611764705882353,
+        0.2627450980392157
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.78125
+      ]
+    },
+    {
+      "id": "land-surface",
+      "name": "Meadow olive",
+      "group": "Meadow",
+      "color": "#9da94e",
+      "rgb": [
+        0.615686274509804,
+        0.6627450980392157,
+        0.3058823529411765
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-13",
+      "name": "Meadow 13",
+      "group": "Meadow",
+      "color": "#aab262",
+      "rgb": [
+        0.6666666666666666,
+        0.6980392156862745,
+        0.3843137254901961
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-14",
+      "name": "Meadow 14",
+      "group": "Meadow",
+      "color": "#b8be71",
+      "rgb": [
+        0.7215686274509804,
+        0.7450980392156863,
+        0.44313725490196076
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-15",
+      "name": "Meadow 15",
+      "group": "Meadow",
+      "color": "#c5c981",
+      "rgb": [
+        0.7725490196078432,
+        0.788235294117647,
+        0.5058823529411764
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.78125
+      ]
+    },
+    {
+      "id": "meadow-16",
+      "name": "Meadow 16",
+      "group": "Meadow",
+      "color": "#d2d490",
+      "rgb": [
+        0.8235294117647058,
+        0.8313725490196079,
+        0.5647058823529412
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 3,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.78125
+      ]
+    },
+    {
+      "id": "forest-01",
+      "name": "Forest 01",
+      "group": "Forest",
+      "color": "#172d24",
+      "rgb": [
+        0.09019607843137255,
+        0.17647058823529413,
+        0.1411764705882353
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-02",
+      "name": "Forest 02",
+      "group": "Forest",
+      "color": "#1d3425",
+      "rgb": [
+        0.11372549019607843,
+        0.20392156862745098,
+        0.1450980392156863
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-03",
+      "name": "Forest 03",
+      "group": "Forest",
+      "color": "#243a26",
+      "rgb": [
+        0.1411764705882353,
+        0.22745098039215686,
+        0.14901960784313725
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-04",
+      "name": "Forest 04",
+      "group": "Forest",
+      "color": "#2a4128",
+      "rgb": [
+        0.16470588235294117,
+        0.2549019607843137,
+        0.1568627450980392
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-05",
+      "name": "Forest 05",
+      "group": "Forest",
+      "color": "#314729",
+      "rgb": [
+        0.19215686274509805,
+        0.2784313725490196,
+        0.1607843137254902
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-06",
+      "name": "Forest 06",
+      "group": "Forest",
+      "color": "#374e2a",
+      "rgb": [
+        0.21568627450980393,
+        0.3058823529411765,
+        0.16470588235294117
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-07",
+      "name": "Forest 07",
+      "group": "Forest",
+      "color": "#455a2e",
+      "rgb": [
+        0.27058823529411763,
+        0.35294117647058826,
+        0.1803921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.71875
+      ]
+    },
+    {
+      "id": "tree-foliage",
+      "name": "Moss green",
+      "group": "Forest",
+      "color": "#566b31",
+      "rgb": [
+        0.33725490196078434,
+        0.4196078431372549,
+        0.19215686274509805
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-09",
+      "name": "Forest 09",
+      "group": "Forest",
+      "color": "#607136",
+      "rgb": [
+        0.3764705882352941,
+        0.44313725490196076,
+        0.21176470588235294
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-10",
+      "name": "Forest 10",
+      "group": "Forest",
+      "color": "#6d7c3a",
+      "rgb": [
+        0.42745098039215684,
+        0.48627450980392156,
+        0.22745098039215686
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-11",
+      "name": "Forest 11",
+      "group": "Forest",
+      "color": "#7b883e",
+      "rgb": [
+        0.4823529411764706,
+        0.5333333333333333,
+        0.24313725490196078
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-12",
+      "name": "Forest 12",
+      "group": "Forest",
+      "color": "#88954a",
+      "rgb": [
+        0.5333333333333333,
+        0.5843137254901961,
+        0.2901960784313726
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-13",
+      "name": "Forest 13",
+      "group": "Forest",
+      "color": "#95a356",
+      "rgb": [
+        0.5843137254901961,
+        0.6392156862745098,
+        0.33725490196078434
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-14",
+      "name": "Forest 14",
+      "group": "Forest",
+      "color": "#a2b063",
+      "rgb": [
+        0.6352941176470588,
+        0.6901960784313725,
+        0.38823529411764707
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-15",
+      "name": "Forest 15",
+      "group": "Forest",
+      "color": "#afbe6f",
+      "rgb": [
+        0.6862745098039216,
+        0.7450980392156863,
+        0.43529411764705883
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.71875
+      ]
+    },
+    {
+      "id": "forest-16",
+      "name": "Forest 16",
+      "group": "Forest",
+      "color": "#bccb7b",
+      "rgb": [
+        0.7372549019607844,
+        0.796078431372549,
+        0.4823529411764706
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 4,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.71875
+      ]
+    },
+    {
+      "id": "cream-paint-01",
+      "name": "Cream paint 01",
+      "group": "Cream paint",
+      "color": "#4e4037",
+      "rgb": [
+        0.3058823529411765,
+        0.25098039215686274,
+        0.21568627450980393
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-02",
+      "name": "Cream paint 02",
+      "group": "Cream paint",
+      "color": "#5c4c3f",
+      "rgb": [
+        0.3607843137254902,
+        0.2980392156862745,
+        0.24705882352941178
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-03",
+      "name": "Cream paint 03",
+      "group": "Cream paint",
+      "color": "#6a5847",
+      "rgb": [
+        0.41568627450980394,
+        0.34509803921568627,
+        0.2784313725490196
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-04",
+      "name": "Cream paint 04",
+      "group": "Cream paint",
+      "color": "#776450",
+      "rgb": [
+        0.4666666666666667,
+        0.39215686274509803,
+        0.3137254901960784
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-05",
+      "name": "Cream paint 05",
+      "group": "Cream paint",
+      "color": "#857058",
+      "rgb": [
+        0.5215686274509804,
+        0.4392156862745098,
+        0.34509803921568627
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-06",
+      "name": "Cream paint 06",
+      "group": "Cream paint",
+      "color": "#937c60",
+      "rgb": [
+        0.5764705882352941,
+        0.48627450980392156,
+        0.3764705882352941
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-07",
+      "name": "Cream paint 07",
+      "group": "Cream paint",
+      "color": "#9e8769",
+      "rgb": [
+        0.6196078431372549,
+        0.5294117647058824,
+        0.4117647058823529
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-08",
+      "name": "Cream paint 08",
+      "group": "Cream paint",
+      "color": "#a99172",
+      "rgb": [
+        0.6627450980392157,
+        0.5686274509803921,
+        0.4470588235294118
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-09",
+      "name": "Cream paint 09",
+      "group": "Cream paint",
+      "color": "#b39c7a",
+      "rgb": [
+        0.7019607843137254,
+        0.611764705882353,
+        0.47843137254901963
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-10",
+      "name": "Cream paint 10",
+      "group": "Cream paint",
+      "color": "#bea683",
+      "rgb": [
+        0.7450980392156863,
+        0.6509803921568628,
+        0.5137254901960784
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-11",
+      "name": "Cream paint 11",
+      "group": "Cream paint",
+      "color": "#c9b18c",
+      "rgb": [
+        0.788235294117647,
+        0.6941176470588235,
+        0.5490196078431373
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-12",
+      "name": "Cream paint 12",
+      "group": "Cream paint",
+      "color": "#d4be9a",
+      "rgb": [
+        0.8313725490196079,
+        0.7450980392156863,
+        0.6039215686274509
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.65625
+      ]
+    },
+    {
+      "id": "building-wall",
+      "name": "Warm cream",
+      "group": "Cream paint",
+      "color": "#e1cdab",
+      "rgb": [
+        0.8823529411764706,
+        0.803921568627451,
+        0.6705882352941176
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-14",
+      "name": "Cream paint 14",
+      "group": "Cream paint",
+      "color": "#e9d7b7",
+      "rgb": [
+        0.9137254901960784,
+        0.8431372549019608,
+        0.7176470588235294
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-15",
+      "name": "Cream paint 15",
+      "group": "Cream paint",
+      "color": "#f4e3c5",
+      "rgb": [
+        0.9568627450980393,
+        0.8901960784313725,
+        0.7725490196078432
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.65625
+      ]
+    },
+    {
+      "id": "cream-paint-16",
+      "name": "Cream paint 16",
+      "group": "Cream paint",
+      "color": "#fff0d3",
+      "rgb": [
+        1,
+        0.9411764705882353,
+        0.8274509803921568
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 5,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.65625
+      ]
+    },
+    {
+      "id": "teal-paint-01",
+      "name": "Teal paint 01",
+      "group": "Teal paint",
+      "color": "#122d35",
+      "rgb": [
+        0.07058823529411765,
+        0.17647058823529413,
+        0.20784313725490197
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-02",
+      "name": "Teal paint 02",
+      "group": "Teal paint",
+      "color": "#17353d",
+      "rgb": [
+        0.09019607843137255,
+        0.20784313725490197,
+        0.23921568627450981
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-03",
+      "name": "Teal paint 03",
+      "group": "Teal paint",
+      "color": "#1d3d45",
+      "rgb": [
+        0.11372549019607843,
+        0.23921568627450981,
+        0.27058823529411763
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-04",
+      "name": "Teal paint 04",
+      "group": "Teal paint",
+      "color": "#22444d",
+      "rgb": [
+        0.13333333333333333,
+        0.26666666666666666,
+        0.30196078431372547
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-05",
+      "name": "Teal paint 05",
+      "group": "Teal paint",
+      "color": "#284c55",
+      "rgb": [
+        0.1568627450980392,
+        0.2980392156862745,
+        0.3333333333333333
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-06",
+      "name": "Teal paint 06",
+      "group": "Teal paint",
+      "color": "#2d545d",
+      "rgb": [
+        0.17647058823529413,
+        0.32941176470588235,
+        0.36470588235294116
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-07",
+      "name": "Teal paint 07",
+      "group": "Teal paint",
+      "color": "#386067",
+      "rgb": [
+        0.2196078431372549,
+        0.3764705882352941,
+        0.403921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.59375
+      ]
+    },
+    {
+      "id": "building-roof",
+      "name": "Muted teal",
+      "group": "Teal paint",
+      "color": "#3d7378",
+      "rgb": [
+        0.23921568627450981,
+        0.45098039215686275,
+        0.47058823529411764
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-09",
+      "name": "Teal paint 09",
+      "group": "Teal paint",
+      "color": "#4e797a",
+      "rgb": [
+        0.3058823529411765,
+        0.4745098039215686,
+        0.47843137254901963
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-10",
+      "name": "Teal paint 10",
+      "group": "Teal paint",
+      "color": "#598684",
+      "rgb": [
+        0.34901960784313724,
+        0.5254901960784314,
+        0.5176470588235295
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-11",
+      "name": "Teal paint 11",
+      "group": "Teal paint",
+      "color": "#64928e",
+      "rgb": [
+        0.39215686274509803,
+        0.5725490196078431,
+        0.5568627450980392
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-12",
+      "name": "Teal paint 12",
+      "group": "Teal paint",
+      "color": "#78a29c",
+      "rgb": [
+        0.47058823529411764,
+        0.6352941176470588,
+        0.611764705882353
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-13",
+      "name": "Teal paint 13",
+      "group": "Teal paint",
+      "color": "#8db3a9",
+      "rgb": [
+        0.5529411764705883,
+        0.7019607843137254,
+        0.6627450980392157
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-14",
+      "name": "Teal paint 14",
+      "group": "Teal paint",
+      "color": "#a1c3b7",
+      "rgb": [
+        0.6313725490196078,
+        0.7647058823529411,
+        0.7176470588235294
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-15",
+      "name": "Teal paint 15",
+      "group": "Teal paint",
+      "color": "#b6d4c4",
+      "rgb": [
+        0.7137254901960784,
+        0.8313725490196079,
+        0.7686274509803922
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.59375
+      ]
+    },
+    {
+      "id": "teal-paint-16",
+      "name": "Teal paint 16",
+      "group": "Teal paint",
+      "color": "#cae4d2",
+      "rgb": [
+        0.792156862745098,
+        0.8941176470588236,
+        0.8235294117647058
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 6,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.59375
+      ]
+    },
+    {
+      "id": "slate-blue-01",
+      "name": "Slate blue 01",
+      "group": "Slate blue",
+      "color": "#182939",
+      "rgb": [
+        0.09411764705882353,
+        0.1607843137254902,
+        0.2235294117647059
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-02",
+      "name": "Slate blue 02",
+      "group": "Slate blue",
+      "color": "#1e3241",
+      "rgb": [
+        0.11764705882352941,
+        0.19607843137254902,
+        0.2549019607843137
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-03",
+      "name": "Slate blue 03",
+      "group": "Slate blue",
+      "color": "#243b49",
+      "rgb": [
+        0.1411764705882353,
+        0.23137254901960785,
+        0.28627450980392155
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-04",
+      "name": "Slate blue 04",
+      "group": "Slate blue",
+      "color": "#294351",
+      "rgb": [
+        0.1607843137254902,
+        0.2627450980392157,
+        0.3176470588235294
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-05",
+      "name": "Slate blue 05",
+      "group": "Slate blue",
+      "color": "#2f4c59",
+      "rgb": [
+        0.1843137254901961,
+        0.2980392156862745,
+        0.34901960784313724
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.53125
+      ]
+    },
+    {
+      "id": "ocean-surface",
+      "name": "Deep slate blue",
+      "group": "Slate blue",
+      "color": "#355561",
+      "rgb": [
+        0.20784313725490197,
+        0.3333333333333333,
+        0.3803921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-07",
+      "name": "Slate blue 07",
+      "group": "Slate blue",
+      "color": "#436370",
+      "rgb": [
+        0.2627450980392157,
+        0.38823529411764707,
+        0.4392156862745098
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-08",
+      "name": "Slate blue 08",
+      "group": "Slate blue",
+      "color": "#50707f",
+      "rgb": [
+        0.3137254901960784,
+        0.4392156862745098,
+        0.4980392156862745
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-09",
+      "name": "Slate blue 09",
+      "group": "Slate blue",
+      "color": "#5e7e8e",
+      "rgb": [
+        0.3686274509803922,
+        0.49411764705882355,
+        0.5568627450980392
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-10",
+      "name": "Slate blue 10",
+      "group": "Slate blue",
+      "color": "#6b8b9d",
+      "rgb": [
+        0.4196078431372549,
+        0.5450980392156862,
+        0.615686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-11",
+      "name": "Slate blue 11",
+      "group": "Slate blue",
+      "color": "#7999ac",
+      "rgb": [
+        0.4745098039215686,
+        0.6,
+        0.6745098039215687
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-12",
+      "name": "Slate blue 12",
+      "group": "Slate blue",
+      "color": "#8ba8b9",
+      "rgb": [
+        0.5450980392156862,
+        0.6588235294117647,
+        0.7254901960784313
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-13",
+      "name": "Slate blue 13",
+      "group": "Slate blue",
+      "color": "#9eb7c5",
+      "rgb": [
+        0.6196078431372549,
+        0.7176470588235294,
+        0.7725490196078432
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-14",
+      "name": "Slate blue 14",
+      "group": "Slate blue",
+      "color": "#b0c5d2",
+      "rgb": [
+        0.6901960784313725,
+        0.7725490196078432,
+        0.8235294117647058
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-15",
+      "name": "Slate blue 15",
+      "group": "Slate blue",
+      "color": "#c3d4de",
+      "rgb": [
+        0.7647058823529411,
+        0.8313725490196079,
+        0.8705882352941177
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.53125
+      ]
+    },
+    {
+      "id": "slate-blue-16",
+      "name": "Slate blue 16",
+      "group": "Slate blue",
+      "color": "#d5e3eb",
+      "rgb": [
+        0.8352941176470589,
+        0.8901960784313725,
+        0.9215686274509803
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 7,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.53125
+      ]
+    },
+    {
+      "id": "ochre-paint-01",
+      "name": "Ochre paint 01",
+      "group": "Ochre paint",
+      "color": "#48331f",
+      "rgb": [
+        0.2823529411764706,
+        0.2,
+        0.12156862745098039
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-02",
+      "name": "Ochre paint 02",
+      "group": "Ochre paint",
+      "color": "#584023",
+      "rgb": [
+        0.34509803921568627,
+        0.25098039215686274,
+        0.13725490196078433
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-03",
+      "name": "Ochre paint 03",
+      "group": "Ochre paint",
+      "color": "#684c28",
+      "rgb": [
+        0.40784313725490196,
+        0.2980392156862745,
+        0.1568627450980392
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-04",
+      "name": "Ochre paint 04",
+      "group": "Ochre paint",
+      "color": "#78592c",
+      "rgb": [
+        0.47058823529411764,
+        0.34901960784313724,
+        0.17254901960784313
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-05",
+      "name": "Ochre paint 05",
+      "group": "Ochre paint",
+      "color": "#886531",
+      "rgb": [
+        0.5333333333333333,
+        0.396078431372549,
+        0.19215686274509805
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-06",
+      "name": "Ochre paint 06",
+      "group": "Ochre paint",
+      "color": "#987235",
+      "rgb": [
+        0.596078431372549,
+        0.4470588235294118,
+        0.20784313725490197
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-07",
+      "name": "Ochre paint 07",
+      "group": "Ochre paint",
+      "color": "#a57e3b",
+      "rgb": [
+        0.6470588235294118,
+        0.49411764705882355,
+        0.23137254901960785
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-08",
+      "name": "Ochre paint 08",
+      "group": "Ochre paint",
+      "color": "#b28a40",
+      "rgb": [
+        0.6980392156862745,
+        0.5411764705882353,
+        0.25098039215686274
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-09",
+      "name": "Ochre paint 09",
+      "group": "Ochre paint",
+      "color": "#bf9746",
+      "rgb": [
+        0.7490196078431373,
+        0.592156862745098,
+        0.27450980392156865
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-10",
+      "name": "Ochre paint 10",
+      "group": "Ochre paint",
+      "color": "#cca34b",
+      "rgb": [
+        0.8,
+        0.6392156862745098,
+        0.29411764705882354
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-11",
+      "name": "Ochre paint 11",
+      "group": "Ochre paint",
+      "color": "#d9af51",
+      "rgb": [
+        0.8509803921568627,
+        0.6862745098039216,
+        0.3176470588235294
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-12",
+      "name": "Ochre paint 12",
+      "group": "Ochre paint",
+      "color": "#e1ba63",
+      "rgb": [
+        0.8823529411764706,
+        0.7294117647058823,
+        0.38823529411764707
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-13",
+      "name": "Ochre paint 13",
+      "group": "Ochre paint",
+      "color": "#e8c675",
+      "rgb": [
+        0.9098039215686274,
+        0.7764705882352941,
+        0.4588235294117647
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-14",
+      "name": "Ochre paint 14",
+      "group": "Ochre paint",
+      "color": "#f0d186",
+      "rgb": [
+        0.9411764705882353,
+        0.8196078431372549,
+        0.5254901960784314
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-15",
+      "name": "Ochre paint 15",
+      "group": "Ochre paint",
+      "color": "#f7dd98",
+      "rgb": [
+        0.9686274509803922,
+        0.8666666666666667,
+        0.596078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.46875
+      ]
+    },
+    {
+      "id": "ochre-paint-16",
+      "name": "Ochre paint 16",
+      "group": "Ochre paint",
+      "color": "#ffe8aa",
+      "rgb": [
+        1,
+        0.9098039215686274,
+        0.6666666666666666
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 8,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.46875
+      ]
+    },
+    {
+      "id": "terracotta-paint-01",
+      "name": "Terracotta paint 01",
+      "group": "Terracotta paint",
+      "color": "#422b2b",
+      "rgb": [
+        0.25882352941176473,
+        0.16862745098039217,
+        0.16862745098039217
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-02",
+      "name": "Terracotta paint 02",
+      "group": "Terracotta paint",
+      "color": "#51312e",
+      "rgb": [
+        0.3176470588235294,
+        0.19215686274509805,
+        0.1803921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-03",
+      "name": "Terracotta paint 03",
+      "group": "Terracotta paint",
+      "color": "#603731",
+      "rgb": [
+        0.3764705882352941,
+        0.21568627450980393,
+        0.19215686274509805
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-04",
+      "name": "Terracotta paint 04",
+      "group": "Terracotta paint",
+      "color": "#6f3d35",
+      "rgb": [
+        0.43529411764705883,
+        0.23921568627450981,
+        0.20784313725490197
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-05",
+      "name": "Terracotta paint 05",
+      "group": "Terracotta paint",
+      "color": "#7e4338",
+      "rgb": [
+        0.49411764705882355,
+        0.2627450980392157,
+        0.2196078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-06",
+      "name": "Terracotta paint 06",
+      "group": "Terracotta paint",
+      "color": "#8d493b",
+      "rgb": [
+        0.5529411764705883,
+        0.28627450980392155,
+        0.23137254901960785
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-07",
+      "name": "Terracotta paint 07",
+      "group": "Terracotta paint",
+      "color": "#9a5340",
+      "rgb": [
+        0.6039215686274509,
+        0.3254901960784314,
+        0.25098039215686274
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-08",
+      "name": "Terracotta paint 08",
+      "group": "Terracotta paint",
+      "color": "#a75e46",
+      "rgb": [
+        0.6549019607843137,
+        0.3686274509803922,
+        0.27450980392156865
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-09",
+      "name": "Terracotta paint 09",
+      "group": "Terracotta paint",
+      "color": "#b4684b",
+      "rgb": [
+        0.7058823529411765,
+        0.40784313725490196,
+        0.29411764705882354
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-10",
+      "name": "Terracotta paint 10",
+      "group": "Terracotta paint",
+      "color": "#c17351",
+      "rgb": [
+        0.7568627450980392,
+        0.45098039215686275,
+        0.3176470588235294
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-11",
+      "name": "Terracotta paint 11",
+      "group": "Terracotta paint",
+      "color": "#ce7d56",
+      "rgb": [
+        0.807843137254902,
+        0.49019607843137253,
+        0.33725490196078434
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-12",
+      "name": "Terracotta paint 12",
+      "group": "Terracotta paint",
+      "color": "#d58d67",
+      "rgb": [
+        0.8352941176470589,
+        0.5529411764705883,
+        0.403921568627451
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-13",
+      "name": "Terracotta paint 13",
+      "group": "Terracotta paint",
+      "color": "#dd9e78",
+      "rgb": [
+        0.8666666666666667,
+        0.6196078431372549,
+        0.47058823529411764
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-14",
+      "name": "Terracotta paint 14",
+      "group": "Terracotta paint",
+      "color": "#e4ae88",
+      "rgb": [
+        0.8941176470588236,
+        0.6823529411764706,
+        0.5333333333333333
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-15",
+      "name": "Terracotta paint 15",
+      "group": "Terracotta paint",
+      "color": "#ecbf99",
+      "rgb": [
+        0.9254901960784314,
+        0.7490196078431373,
+        0.6
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.40625
+      ]
+    },
+    {
+      "id": "terracotta-paint-16",
+      "name": "Terracotta paint 16",
+      "group": "Terracotta paint",
+      "color": "#f3cfaa",
+      "rgb": [
+        0.9529411764705882,
+        0.8117647058823529,
+        0.6666666666666666
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 9,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.40625
+      ]
+    },
+    {
+      "id": "plum-paint-01",
+      "name": "Plum paint 01",
+      "group": "Plum paint",
+      "color": "#2c283d",
+      "rgb": [
+        0.17254901960784313,
+        0.1568627450980392,
+        0.23921568627450981
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-02",
+      "name": "Plum paint 02",
+      "group": "Plum paint",
+      "color": "#372e41",
+      "rgb": [
+        0.21568627450980393,
+        0.1803921568627451,
+        0.2549019607843137
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-03",
+      "name": "Plum paint 03",
+      "group": "Plum paint",
+      "color": "#433446",
+      "rgb": [
+        0.2627450980392157,
+        0.20392156862745098,
+        0.27450980392156865
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-04",
+      "name": "Plum paint 04",
+      "group": "Plum paint",
+      "color": "#4e3a4a",
+      "rgb": [
+        0.3058823529411765,
+        0.22745098039215686,
+        0.2901960784313726
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-05",
+      "name": "Plum paint 05",
+      "group": "Plum paint",
+      "color": "#5a404f",
+      "rgb": [
+        0.35294117647058826,
+        0.25098039215686274,
+        0.30980392156862746
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-06",
+      "name": "Plum paint 06",
+      "group": "Plum paint",
+      "color": "#654653",
+      "rgb": [
+        0.396078431372549,
+        0.27450980392156865,
+        0.3254901960784314
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-07",
+      "name": "Plum paint 07",
+      "group": "Plum paint",
+      "color": "#724f5c",
+      "rgb": [
+        0.4470588235294118,
+        0.30980392156862746,
+        0.3607843137254902
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-08",
+      "name": "Plum paint 08",
+      "group": "Plum paint",
+      "color": "#7f5865",
+      "rgb": [
+        0.4980392156862745,
+        0.34509803921568627,
+        0.396078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-09",
+      "name": "Plum paint 09",
+      "group": "Plum paint",
+      "color": "#8c626e",
+      "rgb": [
+        0.5490196078431373,
+        0.3843137254901961,
+        0.43137254901960786
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-10",
+      "name": "Plum paint 10",
+      "group": "Plum paint",
+      "color": "#996b77",
+      "rgb": [
+        0.6,
+        0.4196078431372549,
+        0.4666666666666667
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-11",
+      "name": "Plum paint 11",
+      "group": "Plum paint",
+      "color": "#a67480",
+      "rgb": [
+        0.6509803921568628,
+        0.4549019607843137,
+        0.5019607843137255
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-12",
+      "name": "Plum paint 12",
+      "group": "Plum paint",
+      "color": "#b3848f",
+      "rgb": [
+        0.7019607843137254,
+        0.5176470588235295,
+        0.5607843137254902
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-13",
+      "name": "Plum paint 13",
+      "group": "Plum paint",
+      "color": "#bf959d",
+      "rgb": [
+        0.7490196078431373,
+        0.5843137254901961,
+        0.615686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-14",
+      "name": "Plum paint 14",
+      "group": "Plum paint",
+      "color": "#cca5ac",
+      "rgb": [
+        0.8,
+        0.6470588235294118,
+        0.6745098039215687
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-15",
+      "name": "Plum paint 15",
+      "group": "Plum paint",
+      "color": "#d8b6ba",
+      "rgb": [
+        0.8470588235294118,
+        0.7137254901960784,
+        0.7294117647058823
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.34375
+      ]
+    },
+    {
+      "id": "plum-paint-16",
+      "name": "Plum paint 16",
+      "group": "Plum paint",
+      "color": "#e5c6c9",
+      "rgb": [
+        0.8980392156862745,
+        0.7764705882352941,
+        0.788235294117647
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.85,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 10,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.34375
+      ]
+    },
+    {
+      "id": "dark-alloy-brushed",
+      "name": "Dark alloy brushed",
+      "group": "Metal · brushed",
+      "color": "#38464b",
+      "rgb": [
+        0.2196078431372549,
+        0.27450980392156865,
+        0.29411764705882354
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.28125
+      ]
+    },
+    {
+      "id": "gunmetal-brushed",
+      "name": "Gunmetal brushed",
+      "group": "Metal · brushed",
+      "color": "#485960",
+      "rgb": [
+        0.2823529411764706,
+        0.34901960784313724,
+        0.3764705882352941
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.28125
+      ]
+    },
+    {
+      "id": "iron-brushed",
+      "name": "Iron brushed",
+      "group": "Metal · brushed",
+      "color": "#626c75",
+      "rgb": [
+        0.3843137254901961,
+        0.4235294117647059,
+        0.4588235294117647
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.28125
+      ]
+    },
+    {
+      "id": "titanium-brushed",
+      "name": "Titanium brushed",
+      "group": "Metal · brushed",
+      "color": "#8996a3",
+      "rgb": [
+        0.5372549019607843,
+        0.5882352941176471,
+        0.6392156862745098
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.28125
+      ]
+    },
+    {
+      "id": "pewter-brushed",
+      "name": "Pewter brushed",
+      "group": "Metal · brushed",
+      "color": "#898d88",
+      "rgb": [
+        0.5372549019607843,
+        0.5529411764705883,
+        0.5333333333333333
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.28125
+      ]
+    },
+    {
+      "id": "steel-brushed",
+      "name": "Steel brushed",
+      "group": "Metal · brushed",
+      "color": "#a6b2b9",
+      "rgb": [
+        0.6509803921568628,
+        0.6980392156862745,
+        0.7254901960784313
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.28125
+      ]
+    },
+    {
+      "id": "nickel-brushed",
+      "name": "Nickel brushed",
+      "group": "Metal · brushed",
+      "color": "#b6b29e",
+      "rgb": [
+        0.7137254901960784,
+        0.6980392156862745,
+        0.6196078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.28125
+      ]
+    },
+    {
+      "id": "aluminium-brushed",
+      "name": "Aluminium brushed",
+      "group": "Metal · brushed",
+      "color": "#d1dadd",
+      "rgb": [
+        0.8196078431372549,
+        0.8549019607843137,
+        0.8666666666666667
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.28125
+      ]
+    },
+    {
+      "id": "oxide-brushed",
+      "name": "Oxide brushed",
+      "group": "Metal · brushed",
+      "color": "#885341",
+      "rgb": [
+        0.5333333333333333,
+        0.3254901960784314,
+        0.2549019607843137
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.28125
+      ]
+    },
+    {
+      "id": "bronze-brushed",
+      "name": "Bronze brushed",
+      "group": "Metal · brushed",
+      "color": "#987044",
+      "rgb": [
+        0.596078431372549,
+        0.4392156862745098,
+        0.26666666666666666
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.28125
+      ]
+    },
+    {
+      "id": "copper-brushed",
+      "name": "Copper brushed",
+      "group": "Metal · brushed",
+      "color": "#b97752",
+      "rgb": [
+        0.7254901960784313,
+        0.4666666666666667,
+        0.3215686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.28125
+      ]
+    },
+    {
+      "id": "rose-gold-brushed",
+      "name": "Rose gold brushed",
+      "group": "Metal · brushed",
+      "color": "#c69179",
+      "rgb": [
+        0.7764705882352941,
+        0.5686274509803921,
+        0.4745098039215686
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.28125
+      ]
+    },
+    {
+      "id": "building-trim",
+      "name": "Brass brushed",
+      "group": "Metal · brushed",
+      "color": "#d6ac4d",
+      "rgb": [
+        0.8392156862745098,
+        0.6745098039215687,
+        0.30196078431372547
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.28125
+      ]
+    },
+    {
+      "id": "gold-brushed",
+      "name": "Gold brushed",
+      "group": "Metal · brushed",
+      "color": "#ddbd69",
+      "rgb": [
+        0.8666666666666667,
+        0.7411764705882353,
+        0.4117647058823529
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.28125
+      ]
+    },
+    {
+      "id": "champagne-brushed",
+      "name": "Champagne brushed",
+      "group": "Metal · brushed",
+      "color": "#e5d5be",
+      "rgb": [
+        0.8980392156862745,
+        0.8352941176470589,
+        0.7450980392156863
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.28125
+      ]
+    },
+    {
+      "id": "pale-gold-brushed",
+      "name": "Pale gold brushed",
+      "group": "Metal · brushed",
+      "color": "#edd6a1",
+      "rgb": [
+        0.9294117647058824,
+        0.8392156862745098,
+        0.6313725490196078
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.42,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 11,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.28125
+      ]
+    },
+    {
+      "id": "dark-alloy-polished",
+      "name": "Dark alloy polished",
+      "group": "Metal · polished",
+      "color": "#38464b",
+      "rgb": [
+        0.2196078431372549,
+        0.27450980392156865,
+        0.29411764705882354
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.21875
+      ]
+    },
+    {
+      "id": "gunmetal-polished",
+      "name": "Gunmetal polished",
+      "group": "Metal · polished",
+      "color": "#485960",
+      "rgb": [
+        0.2823529411764706,
+        0.34901960784313724,
+        0.3764705882352941
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.21875
+      ]
+    },
+    {
+      "id": "iron-polished",
+      "name": "Iron polished",
+      "group": "Metal · polished",
+      "color": "#626c75",
+      "rgb": [
+        0.3843137254901961,
+        0.4235294117647059,
+        0.4588235294117647
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.21875
+      ]
+    },
+    {
+      "id": "titanium-polished",
+      "name": "Titanium polished",
+      "group": "Metal · polished",
+      "color": "#8996a3",
+      "rgb": [
+        0.5372549019607843,
+        0.5882352941176471,
+        0.6392156862745098
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.21875
+      ]
+    },
+    {
+      "id": "pewter-polished",
+      "name": "Pewter polished",
+      "group": "Metal · polished",
+      "color": "#898d88",
+      "rgb": [
+        0.5372549019607843,
+        0.5529411764705883,
+        0.5333333333333333
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.21875
+      ]
+    },
+    {
+      "id": "steel-polished",
+      "name": "Steel polished",
+      "group": "Metal · polished",
+      "color": "#a6b2b9",
+      "rgb": [
+        0.6509803921568628,
+        0.6980392156862745,
+        0.7254901960784313
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.21875
+      ]
+    },
+    {
+      "id": "nickel-polished",
+      "name": "Nickel polished",
+      "group": "Metal · polished",
+      "color": "#b6b29e",
+      "rgb": [
+        0.7137254901960784,
+        0.6980392156862745,
+        0.6196078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.21875
+      ]
+    },
+    {
+      "id": "aluminium-polished",
+      "name": "Aluminium polished",
+      "group": "Metal · polished",
+      "color": "#d1dadd",
+      "rgb": [
+        0.8196078431372549,
+        0.8549019607843137,
+        0.8666666666666667
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.21875
+      ]
+    },
+    {
+      "id": "oxide-polished",
+      "name": "Oxide polished",
+      "group": "Metal · polished",
+      "color": "#885341",
+      "rgb": [
+        0.5333333333333333,
+        0.3254901960784314,
+        0.2549019607843137
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.21875
+      ]
+    },
+    {
+      "id": "bronze-polished",
+      "name": "Bronze polished",
+      "group": "Metal · polished",
+      "color": "#987044",
+      "rgb": [
+        0.596078431372549,
+        0.4392156862745098,
+        0.26666666666666666
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.21875
+      ]
+    },
+    {
+      "id": "copper-polished",
+      "name": "Copper polished",
+      "group": "Metal · polished",
+      "color": "#b97752",
+      "rgb": [
+        0.7254901960784313,
+        0.4666666666666667,
+        0.3215686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.21875
+      ]
+    },
+    {
+      "id": "rose-gold-polished",
+      "name": "Rose gold polished",
+      "group": "Metal · polished",
+      "color": "#c69179",
+      "rgb": [
+        0.7764705882352941,
+        0.5686274509803921,
+        0.4745098039215686
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.21875
+      ]
+    },
+    {
+      "id": "brass-polished",
+      "name": "Brass polished",
+      "group": "Metal · polished",
+      "color": "#d6ac4d",
+      "rgb": [
+        0.8392156862745098,
+        0.6745098039215687,
+        0.30196078431372547
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.21875
+      ]
+    },
+    {
+      "id": "gold-polished",
+      "name": "Gold polished",
+      "group": "Metal · polished",
+      "color": "#ddbd69",
+      "rgb": [
+        0.8666666666666667,
+        0.7411764705882353,
+        0.4117647058823529
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.21875
+      ]
+    },
+    {
+      "id": "champagne-polished",
+      "name": "Champagne polished",
+      "group": "Metal · polished",
+      "color": "#e5d5be",
+      "rgb": [
+        0.8980392156862745,
+        0.8352941176470589,
+        0.7450980392156863
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.21875
+      ]
+    },
+    {
+      "id": "pale-gold-polished",
+      "name": "Pale gold polished",
+      "group": "Metal · polished",
+      "color": "#edd6a1",
+      "rgb": [
+        0.9294117647058824,
+        0.8392156862745098,
+        0.6313725490196078
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.18,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 12,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.21875
+      ]
+    },
+    {
+      "id": "dark-alloy-worn",
+      "name": "Dark alloy worn",
+      "group": "Metal · worn",
+      "color": "#38464b",
+      "rgb": [
+        0.2196078431372549,
+        0.27450980392156865,
+        0.29411764705882354
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.15625
+      ]
+    },
+    {
+      "id": "gunmetal-worn",
+      "name": "Gunmetal worn",
+      "group": "Metal · worn",
+      "color": "#485960",
+      "rgb": [
+        0.2823529411764706,
+        0.34901960784313724,
+        0.3764705882352941
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.15625
+      ]
+    },
+    {
+      "id": "iron-worn",
+      "name": "Iron worn",
+      "group": "Metal · worn",
+      "color": "#626c75",
+      "rgb": [
+        0.3843137254901961,
+        0.4235294117647059,
+        0.4588235294117647
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.15625
+      ]
+    },
+    {
+      "id": "titanium-worn",
+      "name": "Titanium worn",
+      "group": "Metal · worn",
+      "color": "#8996a3",
+      "rgb": [
+        0.5372549019607843,
+        0.5882352941176471,
+        0.6392156862745098
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.15625
+      ]
+    },
+    {
+      "id": "pewter-worn",
+      "name": "Pewter worn",
+      "group": "Metal · worn",
+      "color": "#898d88",
+      "rgb": [
+        0.5372549019607843,
+        0.5529411764705883,
+        0.5333333333333333
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.15625
+      ]
+    },
+    {
+      "id": "steel-worn",
+      "name": "Steel worn",
+      "group": "Metal · worn",
+      "color": "#a6b2b9",
+      "rgb": [
+        0.6509803921568628,
+        0.6980392156862745,
+        0.7254901960784313
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.15625
+      ]
+    },
+    {
+      "id": "nickel-worn",
+      "name": "Nickel worn",
+      "group": "Metal · worn",
+      "color": "#b6b29e",
+      "rgb": [
+        0.7137254901960784,
+        0.6980392156862745,
+        0.6196078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.15625
+      ]
+    },
+    {
+      "id": "aluminium-worn",
+      "name": "Aluminium worn",
+      "group": "Metal · worn",
+      "color": "#d1dadd",
+      "rgb": [
+        0.8196078431372549,
+        0.8549019607843137,
+        0.8666666666666667
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.15625
+      ]
+    },
+    {
+      "id": "oxide-worn",
+      "name": "Oxide worn",
+      "group": "Metal · worn",
+      "color": "#885341",
+      "rgb": [
+        0.5333333333333333,
+        0.3254901960784314,
+        0.2549019607843137
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.15625
+      ]
+    },
+    {
+      "id": "bronze-worn",
+      "name": "Bronze worn",
+      "group": "Metal · worn",
+      "color": "#987044",
+      "rgb": [
+        0.596078431372549,
+        0.4392156862745098,
+        0.26666666666666666
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.15625
+      ]
+    },
+    {
+      "id": "copper-worn",
+      "name": "Copper worn",
+      "group": "Metal · worn",
+      "color": "#b97752",
+      "rgb": [
+        0.7254901960784313,
+        0.4666666666666667,
+        0.3215686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.15625
+      ]
+    },
+    {
+      "id": "rose-gold-worn",
+      "name": "Rose gold worn",
+      "group": "Metal · worn",
+      "color": "#c69179",
+      "rgb": [
+        0.7764705882352941,
+        0.5686274509803921,
+        0.4745098039215686
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.15625
+      ]
+    },
+    {
+      "id": "brass-worn",
+      "name": "Brass worn",
+      "group": "Metal · worn",
+      "color": "#d6ac4d",
+      "rgb": [
+        0.8392156862745098,
+        0.6745098039215687,
+        0.30196078431372547
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.15625
+      ]
+    },
+    {
+      "id": "gold-worn",
+      "name": "Gold worn",
+      "group": "Metal · worn",
+      "color": "#ddbd69",
+      "rgb": [
+        0.8666666666666667,
+        0.7411764705882353,
+        0.4117647058823529
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.15625
+      ]
+    },
+    {
+      "id": "champagne-worn",
+      "name": "Champagne worn",
+      "group": "Metal · worn",
+      "color": "#e5d5be",
+      "rgb": [
+        0.8980392156862745,
+        0.8352941176470589,
+        0.7450980392156863
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.15625
+      ]
+    },
+    {
+      "id": "pale-gold-worn",
+      "name": "Pale gold worn",
+      "group": "Metal · worn",
+      "color": "#edd6a1",
+      "rgb": [
+        0.9294117647058824,
+        0.8392156862745098,
+        0.6313725490196078
+      ],
+      "colorSpace": "srgb",
+      "metallic": 1,
+      "roughness": 0.68,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 13,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.15625
+      ]
+    },
+    {
+      "id": "warm-white-light",
+      "name": "Warm white light",
+      "group": "Emission",
+      "color": "#ffe4ab",
+      "rgb": [
+        1,
+        0.8941176470588236,
+        0.6705882352941176
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.09375
+      ]
+    },
+    {
+      "id": "ivory-light",
+      "name": "Ivory light",
+      "group": "Emission",
+      "color": "#fff2ce",
+      "rgb": [
+        1,
+        0.9490196078431372,
+        0.807843137254902
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.09375
+      ]
+    },
+    {
+      "id": "amber-light",
+      "name": "Amber light",
+      "group": "Emission",
+      "color": "#ffb348",
+      "rgb": [
+        1,
+        0.7019607843137254,
+        0.2823529411764706
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.09375
+      ]
+    },
+    {
+      "id": "orange-light",
+      "name": "Orange light",
+      "group": "Emission",
+      "color": "#ff8b42",
+      "rgb": [
+        1,
+        0.5450980392156862,
+        0.25882352941176473
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.09375
+      ]
+    },
+    {
+      "id": "red-light",
+      "name": "Red light",
+      "group": "Emission",
+      "color": "#ff5d4e",
+      "rgb": [
+        1,
+        0.36470588235294116,
+        0.3058823529411765
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.09375
+      ]
+    },
+    {
+      "id": "coral-light",
+      "name": "Coral light",
+      "group": "Emission",
+      "color": "#ff9280",
+      "rgb": [
+        1,
+        0.5725490196078431,
+        0.5019607843137255
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.09375
+      ]
+    },
+    {
+      "id": "pink-light",
+      "name": "Pink light",
+      "group": "Emission",
+      "color": "#ffa5ce",
+      "rgb": [
+        1,
+        0.6470588235294118,
+        0.807843137254902
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.09375
+      ]
+    },
+    {
+      "id": "violet-light",
+      "name": "Violet light",
+      "group": "Emission",
+      "color": "#d18fff",
+      "rgb": [
+        0.8196078431372549,
+        0.5607843137254902,
+        1
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.09375
+      ]
+    },
+    {
+      "id": "indigo-light",
+      "name": "Indigo light",
+      "group": "Emission",
+      "color": "#ab9bff",
+      "rgb": [
+        0.6705882352941176,
+        0.6078431372549019,
+        1
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.09375
+      ]
+    },
+    {
+      "id": "blue-light",
+      "name": "Blue light",
+      "group": "Emission",
+      "color": "#7e9cff",
+      "rgb": [
+        0.49411764705882355,
+        0.611764705882353,
+        1
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.09375
+      ]
+    },
+    {
+      "id": "azure-light",
+      "name": "Azure light",
+      "group": "Emission",
+      "color": "#8dc9ff",
+      "rgb": [
+        0.5529411764705883,
+        0.788235294117647,
+        1
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.09375
+      ]
+    },
+    {
+      "id": "cyan-light",
+      "name": "Cyan light",
+      "group": "Emission",
+      "color": "#60dfff",
+      "rgb": [
+        0.3764705882352941,
+        0.8745098039215686,
+        1
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.09375
+      ]
+    },
+    {
+      "id": "mint-light",
+      "name": "Mint light",
+      "group": "Emission",
+      "color": "#7dffb9",
+      "rgb": [
+        0.49019607843137253,
+        1,
+        0.7254901960784313
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.09375
+      ]
+    },
+    {
+      "id": "green-light",
+      "name": "Green light",
+      "group": "Emission",
+      "color": "#a4f26b",
+      "rgb": [
+        0.6431372549019608,
+        0.9490196078431372,
+        0.4196078431372549
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.09375
+      ]
+    },
+    {
+      "id": "lime-light",
+      "name": "Lime light",
+      "group": "Emission",
+      "color": "#daef83",
+      "rgb": [
+        0.8549019607843137,
+        0.9372549019607843,
+        0.5137254901960784
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.09375
+      ]
+    },
+    {
+      "id": "cool-white-light",
+      "name": "Cool white light",
+      "group": "Emission",
+      "color": "#d3f4ff",
+      "rgb": [
+        0.8274509803921568,
+        0.9568627450980393,
+        1
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.35,
+      "emissive": true,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 14,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.09375
+      ]
+    },
+    {
+      "id": "smoke-reflective-glass",
+      "name": "Smoke reflective glass",
+      "group": "Glass",
+      "color": "#202b35",
+      "rgb": [
+        0.12549019607843137,
+        0.16862745098039217,
+        0.20784313725490197
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 0,
+      "uvCenter": [
+        0.03125,
+        0.03125
+      ]
+    },
+    {
+      "id": "house-glass",
+      "name": "Petrol reflective glass",
+      "group": "Glass",
+      "color": "#243e4a",
+      "rgb": [
+        0.1411764705882353,
+        0.24313725490196078,
+        0.2901960784313726
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 1,
+      "uvCenter": [
+        0.09375,
+        0.03125
+      ]
+    },
+    {
+      "id": "azure-reflective-glass",
+      "name": "Azure reflective glass",
+      "group": "Glass",
+      "color": "#2e5d83",
+      "rgb": [
+        0.1803921568627451,
+        0.36470588235294116,
+        0.5137254901960784
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 2,
+      "uvCenter": [
+        0.15625,
+        0.03125
+      ]
+    },
+    {
+      "id": "amber-reflective-glass",
+      "name": "Amber reflective glass",
+      "group": "Glass",
+      "color": "#745331",
+      "rgb": [
+        0.4549019607843137,
+        0.3254901960784314,
+        0.19215686274509805
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 3,
+      "uvCenter": [
+        0.21875,
+        0.03125
+      ]
+    },
+    {
+      "id": "mint-reflective-glass",
+      "name": "Mint reflective glass",
+      "group": "Glass",
+      "color": "#376560",
+      "rgb": [
+        0.21568627450980393,
+        0.396078431372549,
+        0.3764705882352941
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 4,
+      "uvCenter": [
+        0.28125,
+        0.03125
+      ]
+    },
+    {
+      "id": "violet-reflective-glass",
+      "name": "Violet reflective glass",
+      "group": "Glass",
+      "color": "#494564",
+      "rgb": [
+        0.28627450980392155,
+        0.27058823529411763,
+        0.39215686274509803
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 5,
+      "uvCenter": [
+        0.34375,
+        0.03125
+      ]
+    },
+    {
+      "id": "clear-reflective-glass",
+      "name": "Clear reflective glass",
+      "group": "Glass",
+      "color": "#9bb5b8",
+      "rgb": [
+        0.6078431372549019,
+        0.7098039215686275,
+        0.7215686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 6,
+      "uvCenter": [
+        0.40625,
+        0.03125
+      ]
+    },
+    {
+      "id": "rose-reflective-glass",
+      "name": "Rose reflective glass",
+      "group": "Glass",
+      "color": "#785664",
+      "rgb": [
+        0.47058823529411764,
+        0.33725490196078434,
+        0.39215686274509803
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0.75,
+      "roughness": 0.14,
+      "emissive": false,
+      "opacity": 1,
+      "transmission": 0,
+      "row": 15,
+      "column": 7,
+      "uvCenter": [
+        0.46875,
+        0.03125
+      ]
+    },
+    {
+      "id": "smoke-clear-glass",
+      "name": "Smoke clear glass",
+      "group": "Glass",
+      "color": "#202b35",
+      "rgb": [
+        0.12549019607843137,
+        0.16862745098039217,
+        0.20784313725490197
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 8,
+      "uvCenter": [
+        0.53125,
+        0.03125
+      ]
+    },
+    {
+      "id": "petrol-clear-glass",
+      "name": "Petrol clear glass",
+      "group": "Glass",
+      "color": "#243e4a",
+      "rgb": [
+        0.1411764705882353,
+        0.24313725490196078,
+        0.2901960784313726
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 9,
+      "uvCenter": [
+        0.59375,
+        0.03125
+      ]
+    },
+    {
+      "id": "azure-clear-glass",
+      "name": "Azure clear glass",
+      "group": "Glass",
+      "color": "#2e5d83",
+      "rgb": [
+        0.1803921568627451,
+        0.36470588235294116,
+        0.5137254901960784
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 10,
+      "uvCenter": [
+        0.65625,
+        0.03125
+      ]
+    },
+    {
+      "id": "amber-clear-glass",
+      "name": "Amber clear glass",
+      "group": "Glass",
+      "color": "#745331",
+      "rgb": [
+        0.4549019607843137,
+        0.3254901960784314,
+        0.19215686274509805
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 11,
+      "uvCenter": [
+        0.71875,
+        0.03125
+      ]
+    },
+    {
+      "id": "mint-clear-glass",
+      "name": "Mint clear glass",
+      "group": "Glass",
+      "color": "#376560",
+      "rgb": [
+        0.21568627450980393,
+        0.396078431372549,
+        0.3764705882352941
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 12,
+      "uvCenter": [
+        0.78125,
+        0.03125
+      ]
+    },
+    {
+      "id": "violet-clear-glass",
+      "name": "Violet clear glass",
+      "group": "Glass",
+      "color": "#494564",
+      "rgb": [
+        0.28627450980392155,
+        0.27058823529411763,
+        0.39215686274509803
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 13,
+      "uvCenter": [
+        0.84375,
+        0.03125
+      ]
+    },
+    {
+      "id": "clear-clear-glass",
+      "name": "Clear clear glass",
+      "group": "Glass",
+      "color": "#9bb5b8",
+      "rgb": [
+        0.6078431372549019,
+        0.7098039215686275,
+        0.7215686274509804
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 14,
+      "uvCenter": [
+        0.90625,
+        0.03125
+      ]
+    },
+    {
+      "id": "rose-clear-glass",
+      "name": "Rose clear glass",
+      "group": "Glass",
+      "color": "#785664",
+      "rgb": [
+        0.47058823529411764,
+        0.33725490196078434,
+        0.39215686274509803
+      ],
+      "colorSpace": "srgb",
+      "metallic": 0,
+      "roughness": 0.12,
+      "emissive": false,
+      "opacity": 0.3,
+      "transmission": 0.8,
+      "row": 15,
+      "column": 15,
+      "uvCenter": [
+        0.96875,
+        0.03125
+      ]
+    }
+  ]
+}

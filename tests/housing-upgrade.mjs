@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {housingUpgradeReadiness} from '../public/housing-upgrade.js';
+const house=[0,2,0,0,0,0,0,15,0,0,1];
+assert.equal(housingUpgradeReadiness(null,false).ready,false);
+assert.equal(housingUpgradeReadiness([0,4],true).ready,false);
+assert.equal(housingUpgradeReadiness(house,false).ready,false);
+assert.equal(housingUpgradeReadiness(house,true,Boolean(house[10]),[true,true,true]).ready,true);
+house[10]=0;
+assert.match(housingUpgradeReadiness(house,true,Boolean(house[10]),[true,true,true]).reason,/Fish/);
+house[10]=1;house[7]=9;
+assert.match(housingUpgradeReadiness(house,true,Boolean(house[10]),[true,true,true]).reason,/9 \/ 15/);
+assert.equal(housingUpgradeReadiness(house,true,Boolean(house[10]),[true,true,true]).ready,false);
+console.log('Housing upgrade readiness requires all needs and full habitation, without bypassing locked needs.');
+house[7]=10;house[10]=1;
+assert.equal(housingUpgradeReadiness(house,true,false).ready,false);
+assert.equal(housingUpgradeReadiness(house,false,true).ready,false);

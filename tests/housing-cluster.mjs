@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {urbanLinks,urbanConnectionOwner} from '../public/urban-connections.js';
+const neighbors=new Uint32Array([1,2,0xffffffff,0xffffffff,0xffffffff,0xffffffff,0,2,0xffffffff,0xffffffff,0xffffffff,0xffffffff,0,1,0xffffffff,0xffffffff,0xffffffff,0xffffffff]);
+const centers=[0,1,0,1,0,0,0,0,1.1],homes=new Map([[0,[0,2]],[1,[1,2]],[2,[2,2]]]);
+assert.deepEqual(urbanLinks(0,homes,neighbors,centers),[1]);assert.deepEqual(urbanLinks(1,homes,neighbors,centers),[0]);
+homes.delete(1);assert.deepEqual(urbanLinks(0,homes,neighbors,centers),[]);
+homes.set(1,[1,3]);assert.deepEqual(urbanLinks(0,homes,neighbors,centers),[]);
+
+homes.set(1,[1,4]);
+assert.deepEqual(urbanLinks(0,homes,neighbors,centers),[1]);
+assert.deepEqual(urbanLinks(1,homes,neighbors,centers),[0]);
+assert.equal(urbanConnectionOwner(0,1,homes),0);
+assert.equal(urbanConnectionOwner(1,0,homes),0);
+homes.set(0,[0,4]);homes.set(1,[1,2]);
+assert.equal(urbanConnectionOwner(0,1,homes),0);
+assert.equal(urbanConnectionOwner(1,0,homes),0);
+homes.set(0,[0,2]);
+assert.equal(urbanConnectionOwner(1,0,homes),0);
+homes.set(0,[0,4]);homes.set(1,[1,4]);
+assert.equal(urbanConnectionOwner(0,1,homes),0);
+homes.set(1,[1,0]);
+assert.deepEqual(urbanLinks(0,homes,neighbors,centers),[]);
+console.log('Urban connections: housing/Commons adjacency, stable single-owner cottages regardless of tile ordering, industrial exclusion and height separation pass.');
+
+const definitions={2:{urban:true},99:{urban:true}};
+homes.set(0,[0,99]);homes.set(1,[1,2]);
+assert.deepEqual(urbanLinks(0,homes,neighbors,centers,definitions),[1]);
+assert.deepEqual(urbanLinks(1,homes,neighbors,centers,definitions),[0]);
+assert.equal(urbanConnectionOwner(0,1,homes,definitions),0);
+definitions[99].urban=false;
+assert.deepEqual(urbanLinks(1,homes,neighbors,centers,definitions),[]);
+assert.equal(urbanConnectionOwner(0,1,homes,definitions),null);
+console.log('Unrecognized future building kinds connect through definition properties without pair-specific rules.');

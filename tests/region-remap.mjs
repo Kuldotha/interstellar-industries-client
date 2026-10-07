@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRegions,captureRegionSources,remapRegions,compileAppearance} from '../public/editor/model-data.js';
+const palette=JSON.parse(readFileSync(new URL('../public/models/palette.json',import.meta.url)));
+const parts=JSON.parse(readFileSync(new URL('../public/models/house_01.json',import.meta.url))).parts,generated=createRegions(parts,palette),appearance={name:'Custom paint',colors:{...generated.colors}},model={...generated};
+const region=model.regions[0],original=region.id;region.id='roof-custom';region.name='My roof';appearance.colors[region.id]=appearance.colors[original];delete appearance.colors[original];
+model.ao[0][0]=-2;model.aoMapping={};model.aoSeams=['example'];captureRegionSources(parts,model,palette);
+const same=remapRegions(parts,model,appearance,palette);assert.deepEqual(same.model.ao,model.ao);assert.deepEqual(same.model.aoSeams,model.aoSeams);assert.deepEqual(same.model.regions.map(r=>[r.id,r.name]),model.regions.map(r=>[r.id,r.name]));
+const resized=structuredClone(parts);resized.forEach(p=>p.positions=p.positions.map(v=>v*10));appearance.colors['roof-custom']=palette.swatches.find(s=>s.opacity===1&&s.id!==generated.colors[original]).id;
+const converted=remapRegions(resized,model,appearance,palette);assert.equal(converted.model.regions[0].id,'roof-custom');assert.equal(converted.model.regions[0].name,'My roof');assert.deepEqual(converted.model.regions[0].faces,region.faces);assert.equal(converted.colors['roof-custom'],appearance.colors['roof-custom']);assert.equal(converted.model.aoMapping,undefined);compileAppearance(resized,converted.model,{colors:converted.colors},palette);
+const duplicate=structuredClone(model);duplicate.regions.push({...structuredClone(region),id:'second-roof',name:'Second roof',faces:region.faces.slice(1)});duplicate.regions[0].faces=region.faces.slice(0,1);
+const split=remapRegions(parts,duplicate,appearance,palette);assert.deepEqual(split.model.regions.at(-1).faces,duplicate.regions.at(-1).faces);
+const before=JSON.stringify(duplicate);assert.throws(()=>remapRegions(resized,duplicate,appearance,palette),/Several regions/);assert.equal(JSON.stringify(duplicate),before);
+console.log('Region remap: stable names and IDs, recolored appearances, resized meshes, unchanged AO, same-color splits and ambiguous remap protection pass.');
