@@ -1,0 +1,96 @@
+INTERSTELLAR INDUSTRIES — SUBMISSION MATERIALS
+
+Links
+Landing page: https://interstellar-industries.pages.dev/about/
+Playable demo: https://interstellar-industries.pages.dev/
+Client: https://github.com/Kuldotha/interstellar-industries-client
+Program: https://github.com/Kuldotha/interstellar-industries-program
+Program address: 4yysd21qfEAwjt19XiMdYL1GrRytMaBQxUZdiVx1Z5zd
+Network: Solana devnet / MagicBlock Ephemeral Rollup
+
+One sentence
+A persistent planet colony builder where settlers, production chains and growing neighbourhoods run on Solana through MagicBlock.
+
+Short description
+Build a home on a small spherical planet. Feed your settlers, turn local resources into industry, and meet their growing needs. Interstellar Industries combines an atom-punk colony builder with a shared Rust simulation running in the browser and on a MagicBlock Ephemeral Rollup. Session keys keep building actions free of repeated wallet prompts. The playable devnet demo takes a colony from its first houses to farming, clothing, beer, electricity and radio.
+
+Product pitch
+Interstellar Industries is for players who enjoy making a settlement work: finding a good coastline, getting the first food supply running, and watching a handful of homes become a community.
+
+Your first planet is a free place to learn. Housing brings workers. Workers support factories. Factories supply resources and goods that let your population grow. The challenge is balancing those connections, not clicking through wallet confirmations.
+
+The game runs in a desktop browser. A player connects a Solana wallet, authorizes a browser session, and builds. The colony's gameplay state lives on a MagicBlock Ephemeral Rollup. Its production and population continue over time when the player leaves.
+
+The current demo includes the first population tier, a guided tutorial, linked farm fields, utility coverage, power and storage-aware production. The longer-term direction is an interplanetary economy: a welcoming homeworld supported by specialized planets. Additional playable planets, planet purchases and tier-two gameplay are future work, not features in the current demo.
+
+Planned business model
+A free starting planet lets players establish a colony before deciding whether to expand. Purchasable additional planets are the intended source of revenue. Pricing, demand and conversion have not yet been validated.
+
+Technical description
+One deterministic Rust simulation is compiled for both WebAssembly and the Solana program. The browser uses it for immediate local predictions; authorized on-chain instructions validate actions and update the authoritative state.
+
+Factories share planet-wide inventory and a workforce multiplier. The engine handles fractional production, competing inputs, population needs, electricity and storage caps. Full storage reduces production to the amount that can still be consumed. Positive inventory can cover a production shortfall until depletion.
+
+The engine retains production metadata and calculates the next state boundary. Stable intervals can be advanced using their rates; scheduled callbacks process changes such as stock depletion, storage filling and population changes. It does not require every planet to run a full simulation every second.
+
+Planet placement uses shared fixed-point generation and immutable topology. The program checks terrain and neighbouring tiles instead of trusting heights provided by the browser. A fishing dock must face water.
+
+Wallet signatures authorize a session through a constrained signing service. Ordinary ER transactions use the browser session key. Starter planet account costs are sponsored. Starter state exists on the ER and is not settled to the base layer in this implementation.
+
+Source is public for review, with all rights reserved. Do not describe it as open source.
+
+PITCH VIDEO — TARGET 2:30, INCLUDING A SHORT FOUNDER INTRO
+
+0:00–0:15 — The invitation
+Visual: slow orbit of an established colony, then close view of housing, crops and the coast. Use live gameplay, not the concept art as a substitute for gameplay.
+Voice: “This is Interstellar Industries: a colony builder on a planet you can turn in your hands. Start with a few settlers and build a place worth coming back to.”
+
+0:15–0:45 — The game
+Visual: housing placement; fishing docks beside water; concrete chain opened in the build menu.
+Voice: “Your people need food, services and everyday comforts. Your industries need workers and materials. Every new home and every new factory changes that balance. You begin with housing and fish, then establish the construction industry that lets you expand.”
+
+0:45–1:10 — The satisfying decisions
+Visual: add a field; inspect household needs; inspect a utility's range; open Storage.
+Voice: “Farms need fields. Neighbourhoods need shared services. Factories share a planet-wide inventory. Full stores slow production to match consumption, and shortages show you where the colony needs attention.”
+
+1:10–1:35 — Why the chain fits
+Visual: place a building without a wallet transaction popup; return to the same colony after a reload. Never show private keys or session storage.
+Voice: “The colony runs on Solana through MagicBlock. Connect a wallet and authorize a session, then play without signing every building action. The simulation continues over time while you are away, and the browser runs the same engine for immediate feedback.”
+
+1:35–2:00 — Founder and evidence
+Record a short founder introduction and genuine player observations. Team background and validation must be supplied by the founder; no user counts, retention or testimonials are asserted in this draft.
+
+2:00–2:30 — Direction and invitation
+Visual: established powered colony, then the Play link.
+Voice: “The demo covers the first tier of settlement, from the first homes to farms, electricity and radio. The larger vision is a colony supported by a network of specialized planets, with a free starting world and paid expansion. The first colony is playable now. Come build yours.”
+
+TECHNICAL DEMO — TARGET 2:30
+
+0:00–0:30: Open the game, show the wallet identity and place a building. Explain that the session key signs ER actions; the wallet message authorizes that session.
+0:30–1:00: Show the production chain and Storage table. Demonstrate full storage replenishing consumption and a paused producer drawing down reserves. Use a designated demo colony; return paused buildings to their prior state.
+1:00–1:30: Show household needs and Commons coverage. Explain grouped population, shared workforce, field capacity and power as inputs to production.
+1:30–2:00: Show the shared Rust runtime in the repositories and the browser's WASM binding. Explain cached metadata, stable rates and next-boundary scheduling. Do not assert a universal CU bound from a single benchmark.
+2:00–2:30: Show deterministic tile validation, then return to live gameplay. State that this is devnet, starter state is ER-only, and the current scope is tier one.
+
+RECORDING
+Use a 1920 × 1080 capture if practical. Close other game tabs. Keep the cursor slow and deliberate. Capture clean gameplay without developer tools, wallet secrets or unrelated tabs. Record narration separately if it makes the delivery clearer. Label accelerated clips. Keep concept-art shots labelled when used.
+
+Promotion post
+A few settlers. A stretch of coastline. A whole world to build.
+
+Interstellar Industries is a browser colony builder with production chains, growing neighbourhoods, farming and power—running on Solana through MagicBlock.
+
+Try the free devnet demo:
+https://interstellar-industries.pages.dev/about/
+
+No SOL purchase needed. Desktop browser + Solana wallet.
+
+Submission preparation
+Confirm the current submission form's video limits and required fields before recording the final edit. The pitch and technical-demo timings above follow Colosseum's published workshop guidance, not a verified requirement of the current submission form.
+Founder background, actual player feedback, distribution plan and final video URLs still need to be supplied. Verify the active MagicBlock Blitz event in its submission portal; the public page's fetched event state is not reliable enough to assume a deadline.
+No submissions or promotional posts have been sent.
+
+Reference links
+https://colosseum.com/worldsfair
+https://blog.colosseum.com/perfecting-your-hackathon-submission/
+https://build.magicblock.app/?event=10&stage=blitz
